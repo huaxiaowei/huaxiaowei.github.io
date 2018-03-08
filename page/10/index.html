@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux 权限管理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/VMware虚拟机三种联网方法及原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -324,7 +324,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/02/Linux 权限管理/" itemprop="url">Linux 权限管理</a></h1>
+                <a class="post-title-link" href="/2016/04/02/VMware虚拟机三种联网方法及原理/" itemprop="url">VMware虚拟机三种联网方法及原理</a></h1>
         
 
         <div class="post-meta">
@@ -359,8 +359,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/Net/" itemprop="url" rel="index">
+                    <span itemprop="name">Net</span>
                   </a>
                 </span>
 
@@ -398,25 +398,14 @@
       
         
           
-          ##权限管理
+          ##Brigde——桥接：默认使用VMnet0
+###原理：
 
-三种基本权限 
-
-r 读权限（read）
-w 写权限（write）
-x 执行权限 （execute）
-
-
-
-
-第1位：文件类型（d 目录，- 普通文件，l 链接文件）
-第2-4位：所属用户权限，用u（user）表示
-第5-7位：所属组权限，用g（group）表示
-第8-10位：其他用
+Bridge  桥”就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在”桥”上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/Linux 权限管理/#more" rel="contents">
+            <a class="btn" href="/2016/04/02/VMware虚拟机三种联网方法及原理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -467,7 +456,7 @@ x 执行权限 （execute）
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux cut 提取文本列&&wc 统计命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux 配置主机之间的免密ssh登陆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -486,7 +475,7 @@ x 执行权限 （execute）
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/02/Linux cut 提取文本列&&wc 统计命令/" itemprop="url">Linux cut 提取文本列&&wc 统计命令</a></h1>
+                <a class="post-title-link" href="/2016/04/02/Linux 配置主机之间的免密ssh登陆/" itemprop="url">Linux 配置主机之间的免密ssh登陆</a></h1>
         
 
         <div class="post-meta">
@@ -560,20 +549,15 @@ x 执行权限 （execute）
       
         
           
-          ##cut命令
+          ##配置主机之间的免密ssh登陆
 
-cut命令可以从一个文本文件或者文本流中提取文本列。
+假如 A  要登陆  B在A上操作：%%首先生成密钥对  h-keygen   (提示时，直接回车即可)%%再将A自己的公钥拷贝并追加到B的授权列表文件authorized_keys中  h-copy-id   B
 
-###cut语法
 
-cut -d&#39;分隔字符&#39; -f fields &lt;==用于有特定分隔字符
-cut -c 字符区间            &lt;==用于排列整齐的信息
-选项与参数：
--d  ：后面接分隔
-          ...
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/Linux cut 提取文本列&&wc 统计命令/#more" rel="contents">
+            <a class="btn" href="/2016/04/02/Linux 配置主机之间的免密ssh登陆/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1240,158 +1224,6 @@ M    根据内存使用量来排序   P    根据CPU占有率来排序   T    �
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux 配置主机之间的免密ssh登陆/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wei.Cao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/596cd3e8d520e.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wei.Cao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/04/02/Linux 配置主机之间的免密ssh登陆/" itemprop="url">Linux 配置主机之间的免密ssh登陆</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-02T11:50:35+08:00">
-                2016-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ##配置主机之间的免密ssh登陆
-
-假如 A  要登陆  B在A上操作：%%首先生成密钥对  h-keygen   (提示时，直接回车即可)%%再将A自己的公钥拷贝并追加到B的授权列表文件authorized_keys中  h-copy-id   B
-
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/Linux 配置主机之间的免密ssh登陆/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux网络配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1500,6 +1332,156 @@ DEVICE=eth0TYPE=Et
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/04/02/Linux网络配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux YUM命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wei.Cao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/596cd3e8d520e.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wei.Cao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/04/02/Linux YUM命令/" itemprop="url">Linux YUM命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-02T11:50:35+08:00">
+                2016-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ##YUM命令
+
+Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/02/Linux YUM命令/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

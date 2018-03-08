@@ -609,7 +609,7 @@ RPM是RedHat Package Manager（RedHat软件包管理工具）的缩写，这一�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux YUM命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linxu网络端口操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -628,7 +628,7 @@ RPM是RedHat Package Manager（RedHat软件包管理工具）的缩写，这一�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/02/Linux YUM命令/" itemprop="url">Linux YUM命令</a></h1>
+                <a class="post-title-link" href="/2016/04/02/Linxu网络端口操作/" itemprop="url">Linxu网络端口操作</a></h1>
         
 
         <div class="post-meta">
@@ -702,13 +702,22 @@ RPM是RedHat Package Manager（RedHat软件包管理工具）的缩写，这一�
       
         
           
-          ##YUM命令
+          ##Linxu网络操作
 
-Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，
+netstat 显示网络状态信息
+-a 显示所有连接和监听端口
+-t (tcp)仅显示tcp相关选项
+-u (udp)仅显示udp相关选项
+-n 拒绝显示别名，能显示数字的全部转化成数字。
+-p 显示建立相关链接的程序名
+
+
+ifconfig 网卡网络配置详解 
+ping 
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/Linux YUM命令/#more" rel="contents">
+            <a class="btn" href="/2016/04/02/Linxu网络端口操作/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -759,7 +768,7 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/VMware虚拟机三种联网方法及原理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux cut 提取文本列&&wc 统计命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -778,7 +787,7 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/02/VMware虚拟机三种联网方法及原理/" itemprop="url">VMware虚拟机三种联网方法及原理</a></h1>
+                <a class="post-title-link" href="/2016/04/02/Linux cut 提取文本列&&wc 统计命令/" itemprop="url">Linux cut 提取文本列&&wc 统计命令</a></h1>
         
 
         <div class="post-meta">
@@ -813,8 +822,8 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Net/" itemprop="url" rel="index">
-                    <span itemprop="name">Net</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -852,14 +861,20 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
       
         
           
-          ##Brigde——桥接：默认使用VMnet0
-###原理：
+          ##cut命令
 
-Bridge  桥”就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在”桥”上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理
+cut命令可以从一个文本文件或者文本流中提取文本列。
+
+###cut语法
+
+cut -d&#39;分隔字符&#39; -f fields &lt;==用于有特定分隔字符
+cut -c 字符区间            &lt;==用于排列整齐的信息
+选项与参数：
+-d  ：后面接分隔
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/VMware虚拟机三种联网方法及原理/#more" rel="contents">
+            <a class="btn" href="/2016/04/02/Linux cut 提取文本列&&wc 统计命令/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1213,7 +1228,7 @@ Bridge  桥”就是一个主机，这个机器拥有两块网卡，分别处于
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux 后台服务管理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux 权限管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -1232,7 +1247,7 @@ Bridge  桥”就是一个主机，这个机器拥有两块网卡，分别处于
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/02/Linux 后台服务管理/" itemprop="url">Linux 后台服务管理</a></h1>
+                <a class="post-title-link" href="/2016/04/02/Linux 权限管理/" itemprop="url">Linux 权限管理</a></h1>
         
 
         <div class="post-meta">
@@ -1306,17 +1321,25 @@ Bridge  桥”就是一个主机，这个机器拥有两块网卡，分别处于
       
         
           
-          ##后台服务管理
+          ##权限管理
 
-service network status   查看指定服务的状态
-service network stop     停止指定服务
-service network start    启动指定服务
-service network restart  重启指定服务
-service –
+三种基本权限 
+
+r 读权限（read）
+w 写权限（write）
+x 执行权限 （execute）
+
+
+
+
+第1位：文件类型（d 目录，- 普通文件，l 链接文件）
+第2-4位：所属用户权限，用u（user）表示
+第5-7位：所属组权限，用g（group）表示
+第8-10位：其他用
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/Linux 后台服务管理/#more" rel="contents">
+            <a class="btn" href="/2016/04/02/Linux 权限管理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1518,7 +1541,7 @@ mv /e
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linxu网络端口操作/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/02/Linux 后台服务管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -1537,7 +1560,7 @@ mv /e
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/02/Linxu网络端口操作/" itemprop="url">Linxu网络端口操作</a></h1>
+                <a class="post-title-link" href="/2016/04/02/Linux 后台服务管理/" itemprop="url">Linux 后台服务管理</a></h1>
         
 
         <div class="post-meta">
@@ -1611,22 +1634,17 @@ mv /e
       
         
           
-          ##Linxu网络操作
+          ##后台服务管理
 
-netstat 显示网络状态信息
--a 显示所有连接和监听端口
--t (tcp)仅显示tcp相关选项
--u (udp)仅显示udp相关选项
--n 拒绝显示别名，能显示数字的全部转化成数字。
--p 显示建立相关链接的程序名
-
-
-ifconfig 网卡网络配置详解 
-ping 
+service network status   查看指定服务的状态
+service network stop     停止指定服务
+service network start    启动指定服务
+service network restart  重启指定服务
+service –
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/02/Linxu网络端口操作/#more" rel="contents">
+            <a class="btn" href="/2016/04/02/Linux 后台服务管理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
