@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/0mme9haLAi.png?imageslim">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/LgGjK4L25J.png?imageslim">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/ljfDakbmBF.png?imageslim">
-<meta property="og:updated_time" content="2018-03-09T08:18:49.733Z">
+<meta property="og:updated_time" content="2018-03-09T09:09:04.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作流调度器Azkaban">
 <meta name="twitter:description" content="概述为什么需要工作流调度系统 一个完整的数据分析系统通常都是由大量任务单元组成： shell脚本程序，java程序，mapreduce程序、hive脚本等   各任务单元之间存在时间先后及前后依赖关系 为了很好地组织起这样的复杂执行计划，需要一个工作流调度系统来调度执行； 例如，我们可能有这样一个需求，某个业务系统每天产生20G原始数据，我们每天都要对其进行处理，处理步骤如下所示： 通过Hadoo">
@@ -598,12 +598,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="Azkaban安装部署"><a href="#Azkaban安装部署" class="headerlink" title="Azkaban安装部署"></a>Azkaban安装部署</h2><ul>
-<li><p>准备工作</p>
-<ul>
+<h2 id="Azkaban安装部署"><a href="#Azkaban安装部署" class="headerlink" title="Azkaban安装部署"></a>Azkaban安装部署</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
 <li>Azkaban Web服务器</li>
-</ul>
-</li>
 </ul>
 <ul>
 <li>azkaban-web-server-2.5.0.tar.gz</li>
@@ -623,43 +619,33 @@
 <ul>
 <li>下载地址:<a href="http://azkaban.github.io/downloads.html" target="_blank" rel="noopener">http://azkaban.github.io/downloads.html</a></li>
 </ul>
-<ul>
-<li>安装</li>
-</ul>
-<ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
 <li>将安装文件上传到集群,最好上传到安装 hive、sqoop的机器上,方便命令的执行</li>
 </ul>
 <ul>
 <li>在当前用户目录下新建 azkabantools目录,用于存放源安装文件.新建azkaban目录,用于存放azkaban运行程序</li>
 </ul>
-<p>azkaban web服务器安装</p>
-<ul>
+<h4 id="azkaban-web服务器安装"><a href="#azkaban-web服务器安装" class="headerlink" title="azkaban web服务器安装"></a>azkaban web服务器安装</h4><ul>
 <li>解压azkaban-web-server-2.5.0.tar.gz</li>
 </ul>
 <ul>
-<li>命令: <code>tar –zxvf azkaban-web-server-2.5.0.tar.gz</code></li>
+<li>命令: <code>tar -zxvf azkaban-web-server-2.5.0.tar.gz</code></li>
 </ul>
 <ul>
 <li>将解压后的azkaban-web-server-2.5.0 移动到 azkaban目录中,并重新命名 webserver</li>
 </ul>
 <ul>
-<li>命令: <code>mv azkaban-web-server-2.5.0 ../azkaban</code></li>
-<li><code>cd ../azkaban</code></li>
-<li><code>mv azkaban-web-server-2.5.0  server</code></li>
+<li>命令: <code>mv azkaban-web-2.5.0/ azkaban/server</code></li>
 </ul>
-<p>azkaban 执行服器安装</p>
-<ul>
+<h4 id="azkaban-执行服器安装"><a href="#azkaban-执行服器安装" class="headerlink" title="azkaban 执行服器安装"></a>azkaban 执行服器安装</h4><ul>
 <li>解压azkaban-executor-server-2.5.0.tar.gz</li>
-<li>命令:<code>tar –zxvf azkaban-executor-server-2.5.0.tar.gz</code></li>
+<li>命令:<code>tar -zxvf azkaban-executor-server-2.5.0.tar.gz</code></li>
 <li>将解压后的azkaban-executor-server-2.5.0 移动到 azkaban目录中,并重新命名 executor</li>
-<li>命令:<code>mv azkaban-executor-server-2.5.0  ../azkaban</code></li>
-<li><code>cd ../azkaban</code></li>
-<li><code>mv azkaban-executor-server-2.5.0  executor</code></li>
+<li>命令:<code>mv azkaban-executor-2.5.0/ azkaban/executor</code></li>
 </ul>
-<p>azkaban脚本导入</p>
-<ul>
+<h4 id="azkaban脚本导入"><a href="#azkaban脚本导入" class="headerlink" title="azkaban脚本导入"></a>azkaban脚本导入</h4><ul>
 <li>解压: azkaban-sql-script-2.5.0.tar.gz</li>
-<li>命令:<code>tar –zxvf azkaban-sql-script-2.5.0.tar.gz</code></li>
+<li>命令:<code>tar -zxvf azkaban-sql-script-2.5.0.tar.gz</code></li>
 <li>将解压后的mysql 脚本,导入到mysql中:</li>
 <li>进入mysql</li>
 </ul>
@@ -728,13 +714,6 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#Azkaban</span><br><span class="line">default.timezone.id=Asia/Shanghai                    #时区</span><br><span class="line"> </span><br><span class="line"># Azkaban JobTypes 插件配置</span><br><span class="line">azkaban.jobtype.plugin.dir=plugins/jobtypes          #jobtype 插件所在位置</span><br><span class="line"> </span><br><span class="line">#Loader for projects</span><br><span class="line">executor.global.properties=conf/global.properties</span><br><span class="line">azkaban.project.dir=projects</span><br><span class="line"> </span><br><span class="line">#数据库设置</span><br><span class="line">database.type=mysql                                  #数据库类型(目前只支持mysql)</span><br><span class="line">mysql.port=3306                                      #数据库端口号</span><br><span class="line">mysql.host=192.168.20.200                            #数据库IP地址</span><br><span class="line">mysql.database=azkaban                               #数据库实例名</span><br><span class="line">mysql.user=root                                      #数据库用户名</span><br><span class="line">mysql.password=root                                  #数据库密码</span><br><span class="line">mysql.numconnections=100                             #最大连接数</span><br><span class="line"> </span><br><span class="line"># 执行服务器配置</span><br><span class="line">executor.maxThreads=50                               #最大线程数</span><br><span class="line">executor.port=12321                                  #端口号(如修改,请与web服务中一致)</span><br><span class="line">executor.flow.threads=30</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>azkaban 执行服务器executor配置</p>
-<ul>
-<li>进入执行服务器安装目录conf,修改azkaban.properties</li>
-<li>vi azkaban.properties</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#Azkaban</span><br><span class="line">default.timezone.id=Asia/Shanghai                    #时区</span><br><span class="line"> </span><br><span class="line"># Azkaban JobTypes 插件配置</span><br><span class="line">azkaban.jobtype.plugin.dir=plugins/jobtypes          #jobtype 插件所在位置</span><br><span class="line"> </span><br><span class="line">#Loader for projects</span><br><span class="line">executor.global.properties=conf/global.properties</span><br><span class="line">azkaban.project.dir=projects</span><br><span class="line"> </span><br><span class="line">#数据库设置</span><br><span class="line">database.type=mysql                                  #数据库类型(目前只支持mysql)</span><br><span class="line">mysql.port=3306                                      #数据库端口号</span><br><span class="line">mysql.host=192.168.20.200                            #数据库IP地址</span><br><span class="line">mysql.database=azkaban                               #数据库实例名</span><br><span class="line">mysql.user=root                                      #数据库用户名</span><br><span class="line">mysql.password=root                                  #数据库密码</span><br><span class="line">mysql.numconnections=100                             #最大连接数</span><br><span class="line"> </span><br><span class="line"># 执行服务器配置</span><br><span class="line">executor.maxThreads=50                               #最大线程数</span><br><span class="line">executor.port=12321                                  #端口号(如修改,请与web服务中一致)</span><br><span class="line">executor.flow.threads=30                             #线程数</span><br></pre></td></tr></table></figure>
-</li>
 <li><p>用户配置</p>
 <ul>
 <li>进入azkaban web服务器conf目录,修改azkaban-users.xml</li>
@@ -744,8 +723,7 @@
 <p>​</p>
 </li>
 </ul>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>####web服务器</p>
-<ul>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><h4 id="web服务器"><a href="#web服务器" class="headerlink" title="web服务器"></a>web服务器</h4><ul>
 <li>在azkaban web服务器目录下执行启动命令<ul>
 <li><code>bin/azkaban-web-start.sh</code></li>
 <li>注:在web服务器根目录运行</li>
@@ -1106,7 +1084,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要工作流调度系统"><span class="nav-number">1.1.</span> <span class="nav-text">为什么需要工作流调度系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作流调度实现方式"><span class="nav-number">1.2.</span> <span class="nav-text">工作流调度实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见工作流调度系统"><span class="nav-number">1.3.</span> <span class="nav-text">常见工作流调度系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各种调度工具特性对比"><span class="nav-number">1.4.</span> <span class="nav-text">各种调度工具特性对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Azkaban与Oozie对比"><span class="nav-number">1.5.</span> <span class="nav-text">Azkaban与Oozie对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azkaban介绍"><span class="nav-number">2.</span> <span class="nav-text">Azkaban介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azkaban安装部署"><span class="nav-number">3.</span> <span class="nav-text">Azkaban安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">3.1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">3.2.</span> <span class="nav-text">启动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#执行服务器"><span class="nav-number">3.2.1.</span> <span class="nav-text">执行服务器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azkaban实战"><span class="nav-number">4.</span> <span class="nav-text">Azkaban实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Command类型单一job示例"><span class="nav-number">4.1.</span> <span class="nav-text">Command类型单一job示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Command类型多job工作流flow"><span class="nav-number">4.2.</span> <span class="nav-text">Command类型多job工作流flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS操作任务"><span class="nav-number">4.3.</span> <span class="nav-text">HDFS操作任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAPREDUCE任务"><span class="nav-number">4.4.</span> <span class="nav-text">MAPREDUCE任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HIVE脚本任务"><span class="nav-number">4.5.</span> <span class="nav-text">HIVE脚本任务</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要工作流调度系统"><span class="nav-number">1.1.</span> <span class="nav-text">为什么需要工作流调度系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作流调度实现方式"><span class="nav-number">1.2.</span> <span class="nav-text">工作流调度实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见工作流调度系统"><span class="nav-number">1.3.</span> <span class="nav-text">常见工作流调度系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各种调度工具特性对比"><span class="nav-number">1.4.</span> <span class="nav-text">各种调度工具特性对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Azkaban与Oozie对比"><span class="nav-number">1.5.</span> <span class="nav-text">Azkaban与Oozie对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azkaban介绍"><span class="nav-number">2.</span> <span class="nav-text">Azkaban介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azkaban安装部署"><span class="nav-number">3.</span> <span class="nav-text">Azkaban安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#azkaban-web服务器安装"><span class="nav-number">3.2.1.</span> <span class="nav-text">azkaban web服务器安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#azkaban-执行服器安装"><span class="nav-number">3.2.2.</span> <span class="nav-text">azkaban 执行服器安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#azkaban脚本导入"><span class="nav-number">3.2.3.</span> <span class="nav-text">azkaban脚本导入</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">3.3.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">3.4.</span> <span class="nav-text">启动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#web服务器"><span class="nav-number">3.4.1.</span> <span class="nav-text">web服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行服务器"><span class="nav-number">3.4.2.</span> <span class="nav-text">执行服务器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Azkaban实战"><span class="nav-number">4.</span> <span class="nav-text">Azkaban实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Command类型单一job示例"><span class="nav-number">4.1.</span> <span class="nav-text">Command类型单一job示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Command类型多job工作流flow"><span class="nav-number">4.2.</span> <span class="nav-text">Command类型多job工作流flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS操作任务"><span class="nav-number">4.3.</span> <span class="nav-text">HDFS操作任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAPREDUCE任务"><span class="nav-number">4.4.</span> <span class="nav-text">MAPREDUCE任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HIVE脚本任务"><span class="nav-number">4.5.</span> <span class="nav-text">HIVE脚本任务</span></a></li></ol></li></ol></div>
             
 
           </div>
