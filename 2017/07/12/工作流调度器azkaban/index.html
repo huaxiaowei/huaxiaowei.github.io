@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/0mme9haLAi.png?imageslim">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/LgGjK4L25J.png?imageslim">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/ljfDakbmBF.png?imageslim">
-<meta property="og:updated_time" content="2018-03-08T11:56:07.348Z">
+<meta property="og:updated_time" content="2018-03-09T08:18:49.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作流调度器Azkaban">
 <meta name="twitter:description" content="概述为什么需要工作流调度系统 一个完整的数据分析系统通常都是由大量任务单元组成： shell脚本程序，java程序，mapreduce程序、hive脚本等   各任务单元之间存在时间先后及前后依赖关系 为了很好地组织起这样的复杂执行计划，需要一个工作流调度系统来调度执行； 例如，我们可能有这样一个需求，某个业务系统每天产生20G原始数据，我们每天都要对其进行处理，处理步骤如下所示： 通过Hadoo">
@@ -438,10 +438,112 @@
 <li>在hadoop领域，常见的工作流调度器有Oozie, Azkaban,Cascading,Hamake等</li>
 </ul>
 <h3 id="各种调度工具特性对比"><a href="#各种调度工具特性对比" class="headerlink" title="各种调度工具特性对比"></a>各种调度工具特性对比</h3><ul>
-<li><p>下面的表格对上述四种hadoop工作流调度器的关键特性进行了比较，尽管这些工作流调度器能够解决的需求场景基本一致，但在设计理念，目标用户，应用场景等方面还是存在显著的区别，在做技术选型的时候，可以提供参考</p>
-<p>| 特性               | Hamake               | Oozie                | Azkaban                        | Cascading |<br>| —————— | ——————– | ——————– | —————————— | ——— |<br>| 工作流描述语言     | XML                  | XML (xPDL based)     | text file with key/value pairs | Java API  |<br>| 依赖机制           | data-driven          | explicit             | explicit                       | explicit  |<br>| 是否要web容器      | No                   | Yes                  | Yes                            | No        |<br>| 进度跟踪           | console/log          | messages    web page | web page                       | Java API  |<br>| Hadoop job调度支持 | no                   | yes                  | yes                            | yes       |<br>| 运行模式           | command line utility | daemon               | daemon                         | API       |<br>| Pig支持            | yes                  | yes                  | yes                            | yes       |<br>| 事件通知           | no                   | no                   | no                             | no        |<br>| 需要安装           | no                   | yes                  | yes                            | no        |<br>| 支持的hadoop版本   | 0.18+                | 0.20+                | currently unknown              | 0.18+     |<br>| 重试支持           | no                   | workflownode evel    | yes                            | yes       |<br>| 运行任意命令       | yes                  | yes                  | yes                            | yes       |<br>| Amazon EMR支持     | yes                  | no                   | currently unknown              | yes       |</p>
-</li>
+<li>下面的表格对上述四种hadoop工作流调度器的关键特性进行了比较，尽管这些工作流调度器能够解决的需求场景基本一致，但在设计理念，目标用户，应用场景等方面还是存在显著的区别，在做技术选型的时候，可以提供参考</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Hamake</th>
+<th>Oozie</th>
+<th>Azkaban</th>
+<th>Cascading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工作流描述语言</td>
+<td>XML</td>
+<td>XML (xPDL based)</td>
+<td>text file with key/value pairs</td>
+<td>Java API</td>
+</tr>
+<tr>
+<td>依赖机制</td>
+<td>data-driven</td>
+<td>explicit</td>
+<td>explicit</td>
+<td>explicit</td>
+</tr>
+<tr>
+<td>是否要web容器</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>进度跟踪</td>
+<td>console/log</td>
+<td>messages    web page</td>
+<td>web page</td>
+<td>Java API</td>
+</tr>
+<tr>
+<td>Hadoop job调度支持</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>运行模式</td>
+<td>command line utility</td>
+<td>daemon</td>
+<td>daemon</td>
+<td>API</td>
+</tr>
+<tr>
+<td>Pig支持</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>事件通知</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>需要安装</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>支持的hadoop版本</td>
+<td>0.18+</td>
+<td>0.20+</td>
+<td>currently unknown</td>
+<td>0.18+</td>
+</tr>
+<tr>
+<td>重试支持</td>
+<td>no</td>
+<td>workflownode evel</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>运行任意命令</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Amazon EMR支持</td>
+<td>yes</td>
+<td>no</td>
+<td>currently unknown</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <h3 id="Azkaban与Oozie对比"><a href="#Azkaban与Oozie对比" class="headerlink" title="Azkaban与Oozie对比"></a>Azkaban与Oozie对比</h3><ul>
 <li>对市面上最流行的两种调度器，给出以下详细对比，以供技术选型参考。总体来说，ooize相比azkaban是一个重量级的任务调度系统，功能全面，但配置使用也更复杂。如果可以不在意某些功能的缺失，轻量级调度器azkaban是很不错的候选对象。</li>
 <li>详情如下：</li>
