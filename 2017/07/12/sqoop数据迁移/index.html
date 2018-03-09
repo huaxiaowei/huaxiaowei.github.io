@@ -90,7 +90,7 @@
 <meta property="og:description" content="概述 sqoop是apache旗下一款“Hadoop和关系数据库服务器之间传送数据”的工具。 导入数据：MySQL，Oracle导入数据到Hadoop的HDFS、HIVE、HBASE等数据存储系统； 导出数据：从Hadoop的文件系统中导出数据到关系数据库   工作机制 将导入或导出命令翻译成mapreduce程序来实现 在翻译出的mapreduce中主要是对inputformat和outputf">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/180307/FjcLH2jC95.png?imageslim">
-<meta property="og:updated_time" content="2018-03-09T09:11:10.794Z">
+<meta property="og:updated_time" content="2018-03-09T09:32:30.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sqoop数据迁移">
 <meta name="twitter:description" content="概述 sqoop是apache旗下一款“Hadoop和关系数据库服务器之间传送数据”的工具。 导入数据：MySQL，Oracle导入数据到Hadoop的HDFS、HIVE、HBASE等数据存储系统； 导出数据：从Hadoop的文件系统中导出数据到关系数据库   工作机制 将导入或导出命令翻译成mapreduce程序来实现 在翻译出的mapreduce中主要是对inputformat和outputf">
@@ -459,18 +459,141 @@
 </ul>
 <p><code>$ sqoop import (generic-args) (import-args)</code></p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="表数据"><a href="#表数据" class="headerlink" title="表数据"></a>表数据</h4><ul>
-<li><p>在mysql中有一个库userdb中三个表：emp, emp_add和emp_contact</p>
-</li>
-<li><p>表emp:</p>
-<p>| id   | name     | deg          | salary | dept |<br>| —- | ——– | ———— | —— | —- |<br>| 1201 | gopal    | manager      | 50,000 | TP   |<br>| 1202 | manisha  | Proof reader | 30,000 | TP   |<br>| 1203 | khalil   | php dev      | 30,000 | AC   |<br>| 1204 | prasanth | php dev      | 20,000 | AC   |<br>| 1205 | kranthi  | admin        | 20,000 | TP   |</p>
-</li>
-<li><p>表emp_add:</p>
-<p>| id   | hno  | street   | city    |<br>| —- | —- | ——– | ——- |<br>| 1201 | 288A | vgiri    | jublee  |<br>| 1202 | 108I | aoc      | sec-bad |<br>| 1203 | 144Z | pgutta   | hyd     |<br>| 1204 | 78B  | old city | sec-bad |<br>| 1205 | 720X | hitec    | sec-bad |</p>
-</li>
-<li><p>表emp_conn:</p>
-<p>| id   | phno    | email           |<br>| —- | ——- | ————— |<br>| 1201 | 2356742 | <a href="mailto:gopal@tp.com" target="_blank" rel="noopener">gopal@tp.com</a>    |<br>| 1202 | 1661663 | <a href="mailto:manisha@tp.com" target="_blank" rel="noopener">manisha@tp.com</a>  |<br>| 1203 | 8887776 | <a href="mailto:khalil@ac.com" target="_blank" rel="noopener">khalil@ac.com</a>   |<br>| 1204 | 9988774 | <a href="mailto:prasanth@ac.com" target="_blank" rel="noopener">prasanth@ac.com</a> |<br>| 1205 | 1231231 | <a href="mailto:kranthi@tp.com" target="_blank" rel="noopener">kranthi@tp.com</a>  |</p>
-</li>
+<li>在mysql中有一个库userdb中三个表：emp, emp_add和emp_contact</li>
+<li>表emp:</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>deg</th>
+<th>salary</th>
+<th>dept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1201</td>
+<td>gopal</td>
+<td>manager</td>
+<td>50,000</td>
+<td>TP</td>
+</tr>
+<tr>
+<td>1202</td>
+<td>manisha</td>
+<td>Proof reader</td>
+<td>30,000</td>
+<td>TP</td>
+</tr>
+<tr>
+<td>1203</td>
+<td>khalil</td>
+<td>php dev</td>
+<td>30,000</td>
+<td>AC</td>
+</tr>
+<tr>
+<td>1204</td>
+<td>prasanth</td>
+<td>php dev</td>
+<td>20,000</td>
+<td>AC</td>
+</tr>
+<tr>
+<td>1205</td>
+<td>kranthi</td>
+<td>admin</td>
+<td>20,000</td>
+<td>TP</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>表emp_add:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>hno</th>
+<th>street</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1201</td>
+<td>288A</td>
+<td>vgiri</td>
+<td>jublee</td>
+</tr>
+<tr>
+<td>1202</td>
+<td>108I</td>
+<td>aoc</td>
+<td>sec-bad</td>
+</tr>
+<tr>
+<td>1203</td>
+<td>144Z</td>
+<td>pgutta</td>
+<td>hyd</td>
+</tr>
+<tr>
+<td>1204</td>
+<td>78B</td>
+<td>old city</td>
+<td>sec-bad</td>
+</tr>
+<tr>
+<td>1205</td>
+<td>720X</td>
+<td>hitec</td>
+<td>sec-bad</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>表emp_conn:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>phno</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1201</td>
+<td>2356742</td>
+<td><a href="mailto:gopal@tp.com" target="_blank" rel="noopener">gopal@tp.com</a></td>
+</tr>
+<tr>
+<td>1202</td>
+<td>1661663</td>
+<td><a href="mailto:manisha@tp.com" target="_blank" rel="noopener">manisha@tp.com</a></td>
+</tr>
+<tr>
+<td>1203</td>
+<td>8887776</td>
+<td><a href="mailto:khalil@ac.com" target="_blank" rel="noopener">khalil@ac.com</a></td>
+</tr>
+<tr>
+<td>1204</td>
+<td>9988774</td>
+<td><a href="mailto:prasanth@ac.com" target="_blank" rel="noopener">prasanth@ac.com</a></td>
+</tr>
+<tr>
+<td>1205</td>
+<td>1231231</td>
+<td><a href="mailto:kranthi@tp.com" target="_blank" rel="noopener">kranthi@tp.com</a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="导入表表数据到HDFS"><a href="#导入表表数据到HDFS" class="headerlink" title="导入表表数据到HDFS"></a>导入表表数据到HDFS</h3><ul>
 <li><p>下面的命令用于从MySQL数据库服务器中的emp表导入HDFS。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> bin/sqoop import   \</span><br><span class="line">--connect jdbc:mysql://hdp-node-01:3306/test   \</span><br><span class="line">--username root  \</span><br><span class="line">--password root   \</span><br><span class="line">--table emp   \</span><br><span class="line">--m 1</span><br></pre></td></tr></table></figure>
