@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="##权限管理  三种基本权限   r 读权限（read） w 写权限（write） x 执行权限 （execute）     第1位：文件类型（d 目录，- 普通文件，l 链接文件） 第2-4位：所属用户权限，用u（user）表示 第5-7位：所属组权限，用g（group）表示 第8-10位：其他用户权限，用o（other）表示 第2-10位：表示所有的权限，用a（all）表示 完整信息：一个文件">
+<meta name="description" content="权限管理 三种基本权限 r 读权限（read） w 写权限（write） x 执行权限 （execute）    第1位：文件类型（d 目录，- 普通文件，l 链接文件） 第2-4位：所属用户权限，用u（user）表示 第5-7位：所属组权限，用g（group）表示 第8-10位：其他用户权限，用o（other）表示 第2-10位：表示所有的权限，用a（all）表示 完整信息：一个文件，所属用户具">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 权限管理">
 <meta property="og:url" content="http://yoursite.com/2016/04/02/Linux 权限管理/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##权限管理  三种基本权限   r 读权限（read） w 写权限（write） x 执行权限 （execute）     第1位：文件类型（d 目录，- 普通文件，l 链接文件） 第2-4位：所属用户权限，用u（user）表示 第5-7位：所属组权限，用g（group）表示 第8-10位：其他用户权限，用o（other）表示 第2-10位：表示所有的权限，用a（all）表示 完整信息：一个文件">
+<meta property="og:description" content="权限管理 三种基本权限 r 读权限（read） w 写权限（write） x 执行权限 （execute）    第1位：文件类型（d 目录，- 普通文件，l 链接文件） 第2-4位：所属用户权限，用u（user）表示 第5-7位：所属组权限，用g（group）表示 第8-10位：其他用户权限，用o（other）表示 第2-10位：表示所有的权限，用a（all）表示 完整信息：一个文件，所属用户具">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170811/am3m5G60k4.png">
-<meta property="og:updated_time" content="2018-03-08T11:46:43.314Z">
+<meta property="og:updated_time" content="2018-03-12T09:56:36.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 权限管理">
-<meta name="twitter:description" content="##权限管理  三种基本权限   r 读权限（read） w 写权限（write） x 执行权限 （execute）     第1位：文件类型（d 目录，- 普通文件，l 链接文件） 第2-4位：所属用户权限，用u（user）表示 第5-7位：所属组权限，用g（group）表示 第8-10位：其他用户权限，用o（other）表示 第2-10位：表示所有的权限，用a（all）表示 完整信息：一个文件">
+<meta name="twitter:description" content="权限管理 三种基本权限 r 读权限（read） w 写权限（write） x 执行权限 （execute）    第1位：文件类型（d 目录，- 普通文件，l 链接文件） 第2-4位：所属用户权限，用u（user）表示 第5-7位：所属组权限，用g（group）表示 第8-10位：其他用户权限，用o（other）表示 第2-10位：表示所有的权限，用a（all）表示 完整信息：一个文件，所属用户具">
 <meta name="twitter:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170811/am3m5G60k4.png">
 
 
@@ -410,17 +410,14 @@
       
 
       
-        <p>##权限管理</p>
-<ul>
-<li><p>三种基本权限 </p>
-<ul>
+        <h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><ul>
+<li>三种基本权限<ul>
 <li>r 读权限（read）</li>
 <li>w 写权限（write）</li>
 <li>x 执行权限 （execute）</li>
 </ul>
 </li>
-<li><p><img src="http://ou9crezlk.bkt.clouddn.com/blog/170811/am3m5G60k4.png" alt="mark"></p>
-</li>
+<li><a href="http://ou9crezlk.bkt.clouddn.com/blog/170811/am3m5G60k4.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170811/am3m5G60k4.png" alt="mark"></a></li>
 <li>第1位：文件类型（d 目录，- 普通文件，l 链接文件）</li>
 <li>第2-4位：所属用户权限，用u（user）表示</li>
 <li>第5-7位：所属组权限，用g（group）表示</li>
@@ -428,15 +425,14 @@
 <li>第2-10位：表示所有的权限，用a（all）表示</li>
 <li>完整信息：一个文件，所属用户具有读写执行权限；所属组的用户<br>有读写权限，没有执行权限；其他用户只有读权限</li>
 </ul>
-<p>##更改操作权限</p>
-<ul>
+<h2 id="更改操作权限"><a href="#更改操作权限" class="headerlink" title="更改操作权限"></a>更改操作权限</h2><ul>
 <li>chmod修改文件权限命令（change mode）<ul>
 <li>参数：-R 下面的文件和子目录做相同权限操作（Recursive递归的）</li>
-<li>例如：<code>chmod  u+x  a.txt</code></li>
+<li>例如：<code>chmod u+x a.txt</code></li>
 </ul>
 </li>
 <li>用数字来表示权限（r=4，w=2，x=1，-=0）<ul>
-<li>例如：<code>chmod  750  b.txt</code></li>
+<li>例如：<code>chmod 750 b.txt</code></li>
 <li>rwx用二进制表示是111，十进制4+2+1=7</li>
 <li>r-x用二进制表示是101，十进制4+0+1=5</li>
 </ul>
@@ -519,8 +515,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/02/将Centos的yum源为国内的阿里云源/" rel="next" title="将Centos的yum源为国内的阿里云源">
-                <i class="fa fa-chevron-left"></i> 将Centos的yum源为国内的阿里云源
+              <a href="/2016/04/02/Linux 配置主机之间的免密ssh登陆/" rel="next" title="Linux 配置主机之间的免密ssh登陆">
+                <i class="fa fa-chevron-left"></i> Linux 配置主机之间的免密ssh登陆
               </a>
             
           </div>
@@ -529,8 +525,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/02/安装git/" rel="prev" title="安装git">
-                安装git <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/02/Linxu网络端口操作/" rel="prev" title="Linxu网络端口操作">
+                Linxu网络端口操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -596,8 +592,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -616,7 +621,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -627,7 +632,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -638,7 +643,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -668,6 +673,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#权限管理"><span class="nav-number">1.</span> <span class="nav-text">权限管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改操作权限"><span class="nav-number">2.</span> <span class="nav-text">更改操作权限</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

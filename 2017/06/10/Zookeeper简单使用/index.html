@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="##zookeeper命令行操作  运行 zkCli.sh –server &amp;lt;ip&amp;gt;进入命令行工具 使用 ls 命令来查看当前 ZooKeeper 中所包含的内容： ls /   创建一个新的 znode ，使用 create /zk myData 。这个命令创建了一个新的 znode 节点“ zk ”以及与它关联的字符串： create /zk &amp;quot;myData&amp;quot;">
+<meta name="description" content="zookeeper命令行操作 运行 zkCli.sh –server &amp;lt;ip&amp;gt;进入命令行工具  使用 ls 命令来查看当前 ZooKeeper 中所包含的内容： ls /   创建一个新的 znode ，使用 create /zk myData 。这个命令创建了一个新的 znode 节点“ zk ”以及与它关联的字符串： create /zk &amp;quot;myData&amp;quot;">
 <meta name="keywords" content="Linux,Java,Zookeeper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Zookeeper简单使用">
 <meta property="og:url" content="http://yoursite.com/2017/06/10/Zookeeper简单使用/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##zookeeper命令行操作  运行 zkCli.sh –server &amp;lt;ip&amp;gt;进入命令行工具 使用 ls 命令来查看当前 ZooKeeper 中所包含的内容： ls /   创建一个新的 znode ，使用 create /zk myData 。这个命令创建了一个新的 znode 节点“ zk ”以及与它关联的字符串： create /zk &amp;quot;myData&amp;quot;">
+<meta property="og:description" content="zookeeper命令行操作 运行 zkCli.sh –server &amp;lt;ip&amp;gt;进入命令行工具  使用 ls 命令来查看当前 ZooKeeper 中所包含的内容： ls /   创建一个新的 znode ，使用 create /zk myData 。这个命令创建了一个新的 znode 节点“ zk ”以及与它关联的字符串： create /zk &amp;quot;myData&amp;quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T11:54:08.951Z">
+<meta property="og:updated_time" content="2018-03-12T11:06:03.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Zookeeper简单使用">
-<meta name="twitter:description" content="##zookeeper命令行操作  运行 zkCli.sh –server &amp;lt;ip&amp;gt;进入命令行工具 使用 ls 命令来查看当前 ZooKeeper 中所包含的内容： ls /   创建一个新的 znode ，使用 create /zk myData 。这个命令创建了一个新的 znode 节点“ zk ”以及与它关联的字符串： create /zk &amp;quot;myData&amp;quot;">
+<meta name="twitter:description" content="zookeeper命令行操作 运行 zkCli.sh –server &amp;lt;ip&amp;gt;进入命令行工具  使用 ls 命令来查看当前 ZooKeeper 中所包含的内容： ls /   创建一个新的 znode ，使用 create /zk myData 。这个命令创建了一个新的 znode 节点“ zk ”以及与它关联的字符串： create /zk &amp;quot;myData&amp;quot;">
 
 
 
@@ -408,9 +408,8 @@
       
 
       
-        <p>##zookeeper命令行操作</p>
+        <h2 id="zookeeper命令行操作"><a href="#zookeeper命令行操作" class="headerlink" title="zookeeper命令行操作"></a>zookeeper命令行操作</h2><p> 运行 <code>zkCli.sh –server &lt;ip&gt;</code>进入命令行工具</p>
 <ul>
-<li>运行 <code>zkCli.sh –server &lt;ip&gt;</code>进入命令行工具</li>
 <li>使用 ls 命令来查看当前 ZooKeeper 中所包含的内容：<ul>
 <li><code>ls /</code></li>
 </ul>
@@ -443,7 +442,45 @@
 </ul>
 </li>
 </ul>
-<p>##zookeeper-api应用<br>| 功能 | 描述 |<br>|–|<br>| create |    在本地目录树中创建一个节点|<br>|delete    |删除一个节点|<br>|exists    |测试本地是否存在目标节点|<br>|get/set data |    从目标节点上读取 / 写数据|<br>|get/set ACL |    获取 / 设置目标节点访问控制列表信息|<br>|get children |    检索一个子节点上的列表|<br>|sync |    等待要被传送的数据|</p>
+<p>##zookeeper-api应用</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create</td>
+<td>在本地目录树中创建一个节点</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除一个节点</td>
+</tr>
+<tr>
+<td>exists</td>
+<td>测试本地是否存在目标节点</td>
+</tr>
+<tr>
+<td>get/set data</td>
+<td>从目标节点上读取 / 写数据</td>
+</tr>
+<tr>
+<td>get/set ACL</td>
+<td>获取 / 设置目标节点访问控制列表信息</td>
+</tr>
+<tr>
+<td>get children</td>
+<td>检索一个子节点上的列表</td>
+</tr>
+<tr>
+<td>sync</td>
+<td>等待要被传送的数据</td>
+</tr>
+</tbody>
+</table>
 <p>###demo代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">import java.io.IOException;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.apache.zookeeper.CreateMode;</span><br><span class="line">import org.apache.zookeeper.KeeperException;</span><br><span class="line">import org.apache.zookeeper.WatchedEvent;</span><br><span class="line">import org.apache.zookeeper.Watcher;</span><br><span class="line">import org.apache.zookeeper.ZooDefs.Ids;</span><br><span class="line">import org.apache.zookeeper.ZooKeeper;</span><br><span class="line">import org.apache.zookeeper.data.Stat;</span><br><span class="line">import org.junit.Before;</span><br><span class="line">import org.junit.Test;</span><br><span class="line"></span><br><span class="line">public class SimpleZkClient &#123;</span><br><span class="line"></span><br><span class="line">	private static final String connectString = &quot;192.168.127.61:2181,192.168.127.62:2181,192.168.127.63:2181&quot;;</span><br><span class="line">	private static final int sessionTimeout = 2000;</span><br><span class="line"></span><br><span class="line">	ZooKeeper zkClient = null;</span><br><span class="line"></span><br><span class="line">	@Before</span><br><span class="line">	public void init() throws Exception &#123;</span><br><span class="line">		zkClient = new ZooKeeper(connectString, sessionTimeout, new Watcher() &#123;</span><br><span class="line">			@Override</span><br><span class="line">			public void process(WatchedEvent event) &#123;</span><br><span class="line">				// 收到事件通知后的回调函数（应该是我们自己的事件处理逻辑）</span><br><span class="line">				System.out.println(event.getType() + &quot;---&quot; + event.getPath());</span><br><span class="line">				try &#123;</span><br><span class="line">					zkClient.getChildren(&quot;/&quot;, true);</span><br><span class="line">				&#125; catch (Exception e) &#123;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 数据的增删改查</span><br><span class="line">	 * </span><br><span class="line">	 * @throws InterruptedException</span><br><span class="line">	 * @throws KeeperException</span><br><span class="line">	 */</span><br><span class="line"></span><br><span class="line">	// 创建数据节点到zk中</span><br><span class="line">	public void testCreate() throws KeeperException, InterruptedException &#123;</span><br><span class="line">		// 参数1：要创建的节点的路径 参数2：节点大数据 参数3：节点的权限 参数4：节点的类型</span><br><span class="line">		String nodeCreated = zkClient.create(&quot;/eclipse&quot;, &quot;hellozk&quot;.getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);</span><br><span class="line">		//上传的数据可以是任何类型，但都要转成byte[]</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//判断znode是否存在</span><br><span class="line">	@Test	</span><br><span class="line">	public void testExist() throws Exception&#123;</span><br><span class="line">		Stat stat = zkClient.exists(&quot;/eclipse&quot;, false);</span><br><span class="line">		System.out.println(stat==null?&quot;not exist&quot;:&quot;exist&quot;);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	// 获取子节点</span><br><span class="line">	@Test</span><br><span class="line">	public void getChildren() throws Exception &#123;</span><br><span class="line">		List&lt;String&gt; children = zkClient.getChildren(&quot;/&quot;, true);</span><br><span class="line">		for (String child : children) &#123;</span><br><span class="line">			System.out.println(child);</span><br><span class="line">		&#125;</span><br><span class="line">		Thread.sleep(Long.MAX_VALUE);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//获取znode的数据</span><br><span class="line">	@Test</span><br><span class="line">	public void getData() throws Exception &#123;</span><br><span class="line">		</span><br><span class="line">		byte[] data = zkClient.getData(&quot;/eclipse&quot;, false, null);</span><br><span class="line">		System.out.println(new String(data));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//删除znode</span><br><span class="line">	@Test</span><br><span class="line">	public void deleteZnode() throws Exception &#123;</span><br><span class="line">		</span><br><span class="line">		//参数2：指定要删除的版本，-1表示删除所有版本</span><br><span class="line">		zkClient.delete(&quot;/eclipse&quot;, -1);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	//删除znode</span><br><span class="line">	@Test</span><br><span class="line">	public void setData() throws Exception &#123;</span><br><span class="line">		</span><br><span class="line">		zkClient.setData(&quot;/app1&quot;, &quot;imissyou angelababy&quot;.getBytes(), -1);</span><br><span class="line">		</span><br><span class="line">		byte[] data = zkClient.getData(&quot;/app1&quot;, false, null);</span><br><span class="line">		System.out.println(new String(data));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>##Zookeeper的监听器工作机制</p>
@@ -538,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/09/hadoop内置RPC API的使用/" rel="next" title="hadoop内置RPC API的使用">
-                <i class="fa fa-chevron-left"></i> hadoop内置RPC API的使用
+              <a href="/2017/06/10/IDEA部署hadoop运行环境/" rel="next" title="IDEA部署hadoop运行环境">
+                <i class="fa fa-chevron-left"></i> IDEA部署hadoop运行环境
               </a>
             
           </div>
@@ -548,8 +585,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/10/IDEA部署hadoop运行环境/" rel="prev" title="IDEA部署hadoop运行环境">
-                IDEA部署hadoop运行环境 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/10/linux安装zookeeper集群/" rel="prev" title="linux安装zookeeper集群">
+                linux安装zookeeper集群 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,8 +652,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -635,7 +681,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -646,7 +692,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -657,7 +703,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -687,6 +733,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#zookeeper命令行操作"><span class="nav-number">1.</span> <span class="nav-text">zookeeper命令行操作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="##YUM命令  Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。 例子（需要上网，没有网络可以建本地源）： yum  install">
+<meta name="description" content="YUM命令 Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。  例子（需要上网，没有网络可以建本地源）：  yum install gcc">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux YUM命令">
 <meta property="og:url" content="http://yoursite.com/2016/04/02/Linux YUM命令/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##YUM命令  Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。 例子（需要上网，没有网络可以建本地源）： yum  install">
+<meta property="og:description" content="YUM命令 Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。  例子（需要上网，没有网络可以建本地源）：  yum install gcc">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/7d1C4lf4l4.png">
-<meta property="og:updated_time" content="2018-03-08T11:46:35.873Z">
+<meta property="og:updated_time" content="2018-03-12T09:54:36.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux YUM命令">
-<meta name="twitter:description" content="##YUM命令  Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。 例子（需要上网，没有网络可以建本地源）： yum  install">
+<meta name="twitter:description" content="YUM命令 Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。  例子（需要上网，没有网络可以建本地源）：  yum install gcc">
 <meta name="twitter:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/7d1C4lf4l4.png">
 
 
@@ -410,16 +410,16 @@
       
 
       
-        <p>##YUM命令</p>
-<ul>
-<li>Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。</li>
-<li>例子（需要上网，没有网络可以建本地源）：<blockquote>
-<p>yum  install  gcc-c++<br>m  remove  gcc-c++<br>m  update  gcc-c++</p>
+        <h2 id="YUM命令"><a href="#YUM命令" class="headerlink" title="YUM命令"></a>YUM命令</h2><ul>
+<li><p>Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE、CentOS中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装。</p>
+</li>
+<li><p>例子（需要上网，没有网络可以建本地源）：</p>
+<blockquote>
+<p>yum install gcc-c++<br>m remove gcc-c++<br>m update gcc-c++</p>
 </blockquote>
 </li>
 </ul>
-<p>###常用命令</p>
-<ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
 <li>安装httpd并确认安装<ul>
 <li><code>yum instll -y httpd</code></li>
 </ul>
@@ -441,17 +441,17 @@
 </ul>
 </li>
 </ul>
-<p>##制作YUM本地源</p>
-<ul>
-<li><p>YUM源其实就是一个保存了多个RPM包的服务器，可以通过http的方式来检索、下载并安装相关的RPM包</p>
-</li>
-<li><p>制作本地YUM源</p>
-</li>
+<h2 id="制作YUM本地源"><a href="#制作YUM本地源" class="headerlink" title="制作YUM本地源"></a>制作YUM本地源</h2><ul>
+<li>YUM源其实就是一个保存了多个RPM包的服务器，可以通过http的方式来检索、下载并安装相关的RPM包</li>
+<li>制作本地YUM源</li>
 </ul>
 <ol>
-<li>准备一台Linux服务器，用最简单的版本CentOS-6.7-x86_64-minimal.iso</li>
-<li>配置好这台服务器的IP地址</li>
-<li>上传CentOS-6.7-x86_64-bin-DVD1.iso到服务器</li>
+<li><p>准备一台Linux服务器，用最简单的版本CentOS-6.7-x86_64-minimal.iso</p>
+</li>
+<li><p>配置好这台服务器的IP地址</p>
+</li>
+<li><p>上传CentOS-6.7-x86_64-bin-DVD1.iso到服务器</p>
+</li>
 <li><p>将CentOS-6.7-x86_64-bin-DVD1.iso镜像挂载到某个目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/iso</span><br><span class="line">mount -o loop CentOS-6.7-x86_64-bin-DVD1.iso /var/iso</span><br></pre></td></tr></table></figure>
 </li>
@@ -460,25 +460,38 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">rename .repo .repo.bak *</span><br><span class="line">vi CentOS-Local.repo</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>[base]<br>name=CentOS-Local<br>baseurl=file:///var/iso<br>gpgcheck=1<br> nabled=1   #很重要，1才启用<br>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6</p>
+<p>[base]<br>name=CentOS-Local<br>baseurl=file:///var/iso<br>gpgcheck=1<br>nabled=1 #很重要，1才启用<br>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6</p>
 </blockquote>
 <p>添加上面内容保存退出</p>
 <ol>
-<li>清除YUM缓冲<br>yum clean all</li>
-<li>列出可用的YUM源<br>yum repolist</li>
-<li>安装相应的软件<br>yum install -y httpd</li>
-<li>开启httpd使用浏览器访问<a href="http://192.168.0.100:80（如果访问不通，检查防火墙是否开启了80端口或关闭防火墙）" target="_blank" rel="noopener">http://192.168.0.100:80（如果访问不通，检查防火墙是否开启了80端口或关闭防火墙）</a><br>service httpd start</li>
-<li>将YUM源配置到httpd（Apache Server）中，其他的服务器即可通过网络访问这个内网中的YUM源了<br>cp -r /var/iso/ /var/www/html/CentOS-6.7</li>
-<li>取消先前挂载的镜像<br>umount /var/iso</li>
-<li>在浏览器中访问<a href="http://192.168.0.100/CentOS-6.7/" target="_blank" rel="noopener">http://192.168.0.100/CentOS-6.7/</a><br><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/7d1C4lf4l4.png" alt="mark"><br>13.让其他需要安装RPM包的服务器指向这个YUM源，准备一台新的服务器，备份或删除原有的YUM源配置文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">rename .repo .repo.bak *</span><br><span class="line">vi CentOS-Local.repo</span><br></pre></td></tr></table></figure>
+<li><p>清除YUM缓冲<br>yum clean all</p>
+</li>
+<li><p>列出可用的YUM源<br>yum repolist</p>
+</li>
+<li><p>安装相应的软件<br>yum install -y httpd</p>
+</li>
+<li><p>开启httpd使用浏览器访问<a href="http://192.168.0.100:80%EF%BC%88%E5%A6%82%E6%9E%9C%E8%AE%BF%E9%97%AE%E4%B8%8D%E9%80%9A%EF%BC%8C%E6%A3%80%E6%9F%A5%E9%98%B2%E7%81%AB%E5%A2%99%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF%E4%BA%8680%E7%AB%AF%E5%8F%A3%E6%88%96%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%89/" target="_blank" rel="noopener">http://192.168.0.100:80（如果访问不通，检查防火墙是否开启了80端口或关闭防火墙）</a><br>service httpd start</p>
+</li>
+<li><p>将YUM源配置到httpd（Apache Server）中，其他的服务器即可通过网络访问这个内网中的YUM源了<br>cp -r /var/iso/ /var/www/html/CentOS-6.7</p>
+</li>
+<li><p>取消先前挂载的镜像<br>umount /var/iso</p>
+</li>
+<li><p>在浏览器中访问</p>
+<p><a href="http://192.168.0.100/CentOS-6.7/" target="_blank" rel="noopener">http://192.168.0.100/CentOS-6.7/</a></p>
+<p>​</p>
+<p><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/7d1C4lf4l4.png" alt="mark"></p>
+<p>​</p>
+<p>13.让其他需要安装RPM包的服务器指向这个YUM源，准备一台新的服务器，备份或删除原有的YUM源配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">rename .repo .repo.bak *</span><br><span class="line">vi CentOS-Local.repo</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <blockquote>
 <p>[base]<br>name=CentOS-Local<br>baseurl=<a href="http://192.168.0.100/CentOS-6.7" target="_blank" rel="noopener">http://192.168.0.100/CentOS-6.7</a><br>gpgcheck=1<br>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6</p>
 </blockquote>
-<p>添加上面内容保存退出<br>14.在这台新的服务器上执行YUM的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum repolist</span><br></pre></td></tr></table></figure></p>
+<p>添加上面内容保存退出<br>14.在这台新的服务器上执行YUM的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum repolist</span><br></pre></td></tr></table></figure>
 <p>15.安装相应的软件<br><code>yum install -y gcc</code></p>
-<p>16、加入依赖包到私有yum的repository<br>进入到repo目录<br>执行命令：  <code>createrepo  .</code></p>
+<p>16、加入依赖包到私有yum的repository<br>进入到repo目录<br>执行命令： <code>createrepo .</code></p>
 
       
     </div>
@@ -556,8 +569,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/15/CentOS6.7最小化安装版安装mysql5.6/" rel="next" title="CentOS6.7最小化安装版安装mysql5.6">
-                <i class="fa fa-chevron-left"></i> CentOS6.7最小化安装版安装mysql5.6
+              <a href="/2016/04/02/将Centos的yum源为国内的阿里云源/" rel="next" title="将Centos的yum源为国内的阿里云源">
+                <i class="fa fa-chevron-left"></i> 将Centos的yum源为国内的阿里云源
               </a>
             
           </div>
@@ -566,8 +579,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/02/Linux网络配置/" rel="prev" title="Linux网络配置">
-                Linux网络配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/02/安装git/" rel="prev" title="安装git">
+                安装git <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -633,8 +646,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -653,7 +675,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -664,7 +686,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -675,7 +697,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -705,6 +727,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#YUM命令"><span class="nav-number">1.</span> <span class="nav-text">YUM命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作YUM本地源"><span class="nav-number">2.</span> <span class="nav-text">制作YUM本地源</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

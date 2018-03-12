@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="##1.不应用线程池的缺点  有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患： 新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象 资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线">
+<meta name="description" content="1.不应用线程池的缺点 有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患：  新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象  资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线程">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java并发编程学习的一些总结">
+<meta property="og:title" content="Java并发编程学习的一些总结">
 <meta property="og:url" content="http://yoursite.com/2016/08/26/java并发编程学习的一些总结/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##1.不应用线程池的缺点  有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患： 新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象 资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线">
+<meta property="og:description" content="1.不应用线程池的缺点 有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患：  新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象  资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T11:45:33.571Z">
+<meta property="og:updated_time" content="2018-03-12T09:44:52.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java并发编程学习的一些总结">
-<meta name="twitter:description" content="##1.不应用线程池的缺点  有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患： 新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象 资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线">
+<meta name="twitter:title" content="Java并发编程学习的一些总结">
+<meta name="twitter:description" content="1.不应用线程池的缺点 有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患：  新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象  资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线程">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>java并发编程学习的一些总结 | Wei.Cao</title>
+  <title>Java并发编程学习的一些总结 | Wei.Cao</title>
   
 
 
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java并发编程学习的一些总结</h1>
+          <h1 class="post-title" itemprop="name headline">Java并发编程学习的一些总结</h1>
         
 
         <div class="post-meta">
@@ -408,18 +408,26 @@
       
 
       
-        <p>##1.不应用线程池的缺点</p>
-<ul>
-<li>有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患：</li>
-<li>新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象</li>
-<li>资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线程数据巨大的可能，那么资源消耗量将是巨大的</li>
-<li>稳定性。当线程数量超过系统资源所能承受的程度，稳定性就会成问题<br>##2.制定执行策略</li>
+        <h2 id="1-不应用线程池的缺点"><a href="#1-不应用线程池的缺点" class="headerlink" title="1.不应用线程池的缺点"></a>1.不应用线程池的缺点</h2><ul>
+<li><p>有些开发者图省事，遇到需要多线程处理的地方，直接new Thread(…).start()，对于一般场景是没问题的，但如果是在并发请求很高的情况下，就会有些隐患：</p>
+</li>
+<li><p>新建线程的开销。线程虽然比进程要轻量许多，但对于JVM来说，新建一个线程的代价还是挺大的，决不同于新建一个对象</p>
+</li>
+<li><p>资源消耗量。没有一个池来限制线程的数量，会导致线程的数量直接取决于应用的并发量，这样有潜在的线程数据巨大的可能，那么资源消耗量将是巨大的</p>
+</li>
+<li><p>稳定性。当线程数量超过系统资源所能承受的程度，稳定性就会成问题</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="2-制定执行策略"><a href="#2-制定执行策略" class="headerlink" title="2.制定执行策略"></a>2.制定执行策略</h2><ul>
 <li>在每个需要多线程处理的地方，不管并发量有多大，需要考虑线程的执行策略</li>
 <li>任务以什么顺序执行</li>
 <li>可以有多少个任务并发执行</li>
 <li>可以有多少个任务进入等待执行队列</li>
 <li>系统过载的时候，应该放弃哪些任务？如何通知到应用程序？</li>
-<li>一个任务的执行前后应该做什么处理<br>##3.线程池的类型</li>
+<li>一个任务的执行前后应该做什么处理</li>
+</ul>
+<h2 id="3-线程池的类型"><a href="#3-线程池的类型" class="headerlink" title="3.线程池的类型"></a>3.线程池的类型</h2><ul>
 <li>不管是通过Executors创建线程池，还是通过Spring来管理，都得清楚知道有哪几种线程池：<ul>
 <li>FixedThreadPool：定长线程池，提交任务时创建线程，直到池的最大容量，如果有线程非预期结束，会补充新线程</li>
 <li>CachedThreadPool：可变线程池，它犹如一个弹簧，如果没有任务需求时，它回收空闲线程，如果需求增加，则按需增加线程，不对池的大小做限制</li>
@@ -427,8 +435,12 @@
 <li>SecheduledThreadPool：周期性线程池。支持执行周期性线程任务</li>
 </ul>
 </li>
-<li><strong>其实</strong>，这些不同类型的线程池都是通过构建一个ThreadPoolExecutor来完成的，所不同的是<code>corePoolSize,maximumPoolSize,keepAliveTime,unit,workQueue,threadFactory</code>这么几个参数。具体可以参见JDK DOC。<br>##4.线程池饱和策略</li>
-<li>由以上线程池类型可知，除了CachedThreadPool其他线程池都有饱和的可能，当饱和以后就需要相应的策略处理请求线程的任务，比如，达到上限时通过ThreadPoolExecutor.setRejectedExecutionHandler方法设置一个拒绝任务的策略，JDK提供了AbortPolicy、CallerRunsPolicy、DiscardPolicy、DiscardOldestPolicy几种策略，具体差异可见JDK DOC<br>##5.线程无依赖性</li>
+<li><strong>其实</strong>，这些不同类型的线程池都是通过构建一个ThreadPoolExecutor来完成的，所不同的是<code>corePoolSize,maximumPoolSize,keepAliveTime,unit,workQueue,threadFactory</code>这么几个参数。具体可以参见JDK DOC。</li>
+</ul>
+<h2 id="4-线程池饱和策略"><a href="#4-线程池饱和策略" class="headerlink" title="4.线程池饱和策略"></a>4.线程池饱和策略</h2><ul>
+<li>由以上线程池类型可知，除了CachedThreadPool其他线程池都有饱和的可能，当饱和以后就需要相应的策略处理请求线程的任务，比如，达到上限时通过ThreadPoolExecutor.setRejectedExecutionHandler方法设置一个拒绝任务的策略，JDK提供了AbortPolicy、CallerRunsPolicy、DiscardPolicy、DiscardOldestPolicy几种策略，具体差异可见JDK DOC</li>
+</ul>
+<h2 id="5-线程无依赖性"><a href="#5-线程无依赖性" class="headerlink" title="5.线程无依赖性"></a>5.线程无依赖性</h2><ul>
 <li>多线程任务设计上尽量使得各任务是独立无依赖的，所谓依赖性可两个方面：<ul>
 <li>线程之间的依赖性。如果线程有依赖可能会造成死锁或饥饿</li>
 <li>调用者与线程的依赖性。调用者得监视线程的完成情况，影响可并发量<br>当然，在有些业务里确实需要一定的依赖性，比如调用者需要得到线程完成后结果，传统的Thread是不便完成的，因为run方法无返回值，只能通过一些共享的变量来传递结果，但在Executor框架里可以通过Future和Callable实现需要有返回值的任务，当然线程的异步性导致需要有相应机制来保证调用者能等待任务完成。</li>
@@ -484,7 +496,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2016/08/26/java并发编程学习的一些总结/" title="java并发编程学习的一些总结">http://yoursite.com/2016/08/26/java并发编程学习的一些总结/</a>
+    <a href="http://yoursite.com/2016/08/26/java并发编程学习的一些总结/" title="Java并发编程学习的一些总结">http://yoursite.com/2016/08/26/java并发编程学习的一些总结/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -512,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/26/java并发包消息队列/" rel="next" title="java并发包消息队列">
-                <i class="fa fa-chevron-left"></i> java并发包消息队列
+              <a href="/2016/08/06/多个git账号之间的切换/" rel="next" title="多个git账号之间的切换">
+                <i class="fa fa-chevron-left"></i> 多个git账号之间的切换
               </a>
             
           </div>
@@ -522,8 +534,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/26/java的JMS技术/" rel="prev" title="java并发编程学习的一些总结">
-                java并发编程学习的一些总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/26/java的JMS技术/" rel="prev" title="Java的JMS技术">
+                Java的JMS技术 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,8 +601,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -609,7 +630,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -620,7 +641,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -631,7 +652,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -661,6 +682,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-不应用线程池的缺点"><span class="nav-number">1.</span> <span class="nav-text">1.不应用线程池的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-制定执行策略"><span class="nav-number">2.</span> <span class="nav-text">2.制定执行策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-线程池的类型"><span class="nav-number">3.</span> <span class="nav-text">3.线程池的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-线程池饱和策略"><span class="nav-number">4.</span> <span class="nav-text">4.线程池饱和策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-线程无依赖性"><span class="nav-number">5.</span> <span class="nav-text">5.线程无依赖性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

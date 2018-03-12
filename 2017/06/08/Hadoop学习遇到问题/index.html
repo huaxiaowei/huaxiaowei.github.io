@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Hadoop集群警告##查看集群状态  hdfs dfsadmin -report  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364Configured Capacity: 55306051584 (51.5">
+<meta name="description" content="Hadoop集群警告查看集群状态 hdfs dfsadmin -report  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364Configured Capacity: 55306051584 (51.51 G">
 <meta name="keywords" content="Hadoop,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hadoop学习遇到问题">
 <meta property="og:url" content="http://yoursite.com/2017/06/08/Hadoop学习遇到问题/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="Hadoop集群警告##查看集群状态  hdfs dfsadmin -report  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364Configured Capacity: 55306051584 (51.5">
+<meta property="og:description" content="Hadoop集群警告查看集群状态 hdfs dfsadmin -report  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364Configured Capacity: 55306051584 (51.51 G">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T11:42:32.669Z">
+<meta property="og:updated_time" content="2018-03-12T09:26:51.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop学习遇到问题">
-<meta name="twitter:description" content="Hadoop集群警告##查看集群状态  hdfs dfsadmin -report  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364Configured Capacity: 55306051584 (51.5">
+<meta name="twitter:description" content="Hadoop集群警告查看集群状态 hdfs dfsadmin -report  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364Configured Capacity: 55306051584 (51.51 G">
 
 
 
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">Hadoop</span>
                   </a>
                 </span>
 
@@ -408,8 +408,7 @@
       
 
       
-        <h1 id="Hadoop集群警告"><a href="#Hadoop集群警告" class="headerlink" title="Hadoop集群警告"></a>Hadoop集群警告</h1><p>##查看集群状态</p>
-<ul>
+        <h1 id="Hadoop集群警告"><a href="#Hadoop集群警告" class="headerlink" title="Hadoop集群警告"></a>Hadoop集群警告</h1><h2 id="查看集群状态"><a href="#查看集群状态" class="headerlink" title="查看集群状态"></a>查看集群状态</h2><ul>
 <li>hdfs dfsadmin -report</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">Configured Capacity: 55306051584 (51.51 GB)</span><br><span class="line">Present Capacity: 46777233408 (43.56 GB)</span><br><span class="line">DFS Remaining: 46777159680 (43.56 GB)</span><br><span class="line">DFS Used: 73728 (72 KB)</span><br><span class="line">DFS Used%: 0.00%</span><br><span class="line">Under replicated blocks: 0</span><br><span class="line">Blocks with corrupt replicas: 0</span><br><span class="line">Missing blocks: 0</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line">Live datanodes (3):</span><br><span class="line"></span><br><span class="line">Name: 192.168.127.63:50010 (mini3)</span><br><span class="line">Hostname: mini3</span><br><span class="line">Decommission Status : Normal</span><br><span class="line">Configured Capacity: 18435350528 (17.17 GB)</span><br><span class="line">DFS Used: 24576 (24 KB)</span><br><span class="line">Non DFS Used: 2847330304 (2.65 GB)</span><br><span class="line">DFS Remaining: 15587995648 (14.52 GB)</span><br><span class="line">DFS Used%: 0.00%</span><br><span class="line">DFS Remaining%: 84.55%</span><br><span class="line">Configured Cache Capacity: 0 (0 B)</span><br><span class="line">Cache Used: 0 (0 B)</span><br><span class="line">Cache Remaining: 0 (0 B)</span><br><span class="line">Cache Used%: 100.00%</span><br><span class="line">Cache Remaining%: 0.00%</span><br><span class="line">Xceivers: 1</span><br><span class="line">Last contact: Tue Oct 24 00:10:37 CST 2017</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Name: 192.168.127.62:50010 (mini2)</span><br><span class="line">Hostname: mini2</span><br><span class="line">Decommission Status : Normal</span><br><span class="line">Configured Capacity: 18435350528 (17.17 GB)</span><br><span class="line">DFS Used: 24576 (24 KB)</span><br><span class="line">Non DFS Used: 2847182848 (2.65 GB)</span><br><span class="line">DFS Remaining: 15588143104 (14.52 GB)</span><br><span class="line">DFS Used%: 0.00%</span><br><span class="line">DFS Remaining%: 84.56%</span><br><span class="line">Configured Cache Capacity: 0 (0 B)</span><br><span class="line">Cache Used: 0 (0 B)</span><br><span class="line">Cache Remaining: 0 (0 B)</span><br><span class="line">Cache Used%: 100.00%</span><br><span class="line">Cache Remaining%: 0.00%</span><br><span class="line">Xceivers: 1</span><br><span class="line">Last contact: Tue Oct 24 00:10:37 CST 2017</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Name: 192.168.127.64:50010 (mini4)</span><br><span class="line">Hostname: mini4</span><br><span class="line">Decommission Status : Normal</span><br><span class="line">Configured Capacity: 18435350528 (17.17 GB)</span><br><span class="line">DFS Used: 24576 (24 KB)</span><br><span class="line">Non DFS Used: 2834305024 (2.64 GB)</span><br><span class="line">DFS Remaining: 15601020928 (14.53 GB)</span><br><span class="line">DFS Used%: 0.00%</span><br><span class="line">DFS Remaining%: 84.63%</span><br><span class="line">Configured Cache Capacity: 0 (0 B)</span><br><span class="line">Cache Used: 0 (0 B)</span><br><span class="line">Cache Remaining: 0 (0 B)</span><br><span class="line">Cache Used%: 100.00%</span><br><span class="line">Cache Remaining%: 0.00%</span><br><span class="line">Xceivers: 1</span><br><span class="line">Last contact: Tue Oct 24 00:10:37 CST 2017</span><br></pre></td></tr></table></figure>
@@ -417,7 +416,7 @@
 <li><p>警告1</p>
 <ul>
 <li>Java HotSpot(TM) Client VM warning: You have loaded library /home/hujian/apps/hadoop-2.6.4/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.</li>
-<li>It’s highly recommended that you fix the library with ‘execstack -c <libfile>‘, or link it with ‘-z noexecstack’.</libfile></li>
+<li>It’s highly recommended that you fix the library with ‘execstack -c ‘, or link it with ‘-z noexecstack’.</li>
 </ul>
 </li>
 <li><p>解决方案：</p>
@@ -451,9 +450,9 @@
 </ul>
 </li>
 </ul>
-<h2 id="操作HDFS报错"><a href="#操作HDFS报错" class="headerlink" title="操作HDFS报错"></a>操作HDFS报错</h2><p>15/10/08 21:04:19 INFO hdfs.DFSClient: Exception in createBlockOutputStream<br>java.io.IOException: Got error, status message , ack with firstBadLink as 192.168.1.114:50010<br> at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:140)<br> at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)<br> at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)</p>
+<h2 id="操作HDFS报错"><a href="#操作HDFS报错" class="headerlink" title="操作HDFS报错"></a>操作HDFS报错</h2><p>15/10/08 21:04:19 INFO hdfs.DFSClient: Exception in createBlockOutputStream<br>java.io.IOException: Got error, status message , ack with firstBadLink as 192.168.1.114:50010<br>at org.apache.hadoop.hdfs.protocol.datatransfer.DataTransferProtoUtil.checkBlockOpStatus(DataTransferProtoUtil.java:140)<br>at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.createBlockOutputStream(DFSOutputStream.java:1334)<br>at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.nextBlockOutputStream(DFSOutputStream.java:1237)</p>
 <p>原因是由于centos7的防火墙引起与datanode无法通讯造成。</p>
-<p>centos7 关闭防火墙 service firewalld stop</p>
+<p>centos7 关闭防火墙 <code>service firewalld stop</code></p>
 
       
     </div>
@@ -639,7 +638,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -650,7 +649,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -661,7 +660,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -701,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop集群警告"><span class="nav-number">1.</span> <span class="nav-text">Hadoop集群警告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#警告的解决"><span class="nav-number">1.1.</span> <span class="nav-text">警告的解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作HDFS报错"><span class="nav-number">1.2.</span> <span class="nav-text">操作HDFS报错</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop集群警告"><span class="nav-number">1.</span> <span class="nav-text">Hadoop集群警告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看集群状态"><span class="nav-number">1.1.</span> <span class="nav-text">查看集群状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#警告的解决"><span class="nav-number">1.2.</span> <span class="nav-text">警告的解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作HDFS报错"><span class="nav-number">1.3.</span> <span class="nav-text">操作HDFS报错</span></a></li></ol></li></ol></div>
             
 
           </div>

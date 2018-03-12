@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="Java,多线程," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="##同步和异步的区别  例如一个请求访问 同步：一个请求一定要等待返回之后再进行下一个操作 异步：一个请求不用等待返回之后就可以进行下一个操作##进程介绍 不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负责当前">
-<meta name="keywords" content="Java">
+<meta name="description" content="同步和异步的区别 例如一个请求访问  同步：一个请求一定要等待返回之后再进行下一个操作  异步：一个请求不用等待返回之后就可以进行下一个操作 ​ ##进程介绍  不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负">
+<meta name="keywords" content="Java,多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java多线程基础学习">
 <meta property="og:url" content="http://yoursite.com/2016/01/02/java多线程基础/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##同步和异步的区别  例如一个请求访问 同步：一个请求一定要等待返回之后再进行下一个操作 异步：一个请求不用等待返回之后就可以进行下一个操作##进程介绍 不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负责当前">
+<meta property="og:description" content="同步和异步的区别 例如一个请求访问  同步：一个请求一定要等待返回之后再进行下一个操作  异步：一个请求不用等待返回之后就可以进行下一个操作 ​ ##进程介绍  不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T11:44:59.591Z">
+<meta property="og:updated_time" content="2018-03-12T09:39:41.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多线程基础学习">
-<meta name="twitter:description" content="##同步和异步的区别  例如一个请求访问 同步：一个请求一定要等待返回之后再进行下一个操作 异步：一个请求不用等待返回之后就可以进行下一个操作##进程介绍 不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负责当前">
+<meta name="twitter:description" content="同步和异步的区别 例如一个请求访问  同步：一个请求一定要等待返回之后再进行下一个操作  异步：一个请求不用等待返回之后就可以进行下一个操作 ​ ##进程介绍  不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负">
 
 
 
@@ -408,64 +408,69 @@
       
 
       
-        <p>##同步和异步的区别</p>
+        <h2 id="同步和异步的区别"><a href="#同步和异步的区别" class="headerlink" title="同步和异步的区别"></a>同步和异步的区别</h2><ul>
+<li><p>例如一个请求访问</p>
 <ul>
-<li>例如一个请求访问<ul>
-<li>同步：一个请求一定要等待返回之后再进行下一个操作</li>
-<li>异步：一个请求不用等待返回之后就可以进行下一个操作<br>##进程介绍<blockquote>
+<li><p>同步：一个请求一定要等待返回之后再进行下一个操作</p>
+</li>
+<li><p>异步：一个请求不用等待返回之后就可以进行下一个操作</p>
+<p>​</p>
+<p>##进程介绍</p>
+<blockquote>
 <p>不管是我们开发的应用程序，还是我们运行的其他的应用程序，都需要先把程序安装在本地的硬盘上。然后找到这个程序的启动文件，启动程序的时候，其实是电脑把当前的这个程序加载到内存中，在内存中需要给当前的程序分配一段独立的运行空间。这片空间就专门负责当前这个程序的运行。<br>不同的应用程序运行的过程中都需要在内存中分配自己独立的运行空间，彼此之间不会相互的影响。我们把每个独立应用程序在内存的独立空间称为当前应用程序运行的一个进程。<br>进程：它是内存中的一段独立的空间，可以负责当前应用程序的运行。当前这个进程负责调度当前程序中的所有运行细节。</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
-<p>##线程介绍</p>
-<blockquote>
-<p>启动的QQ聊天软件，需要和多个人进行聊天。这时多个人之间是不能相互影响，但是它们都位于当前QQ这个软件运行时所分配的内存的独立空间中。<br>    在一个进程中，每个独立的功能都需要独立的去运行，这时又需要把当前这个进程划分成多个运行区域，每个独立的小区域（小单元）称为一个线程。<br>线程：它是位于进程中，负责当前进程中的某个具备独立运行资格的空间。<br>进程是负责整个程序的运行，而线程是程序中具体的某个独立功能的运行。一个进程中至少应该有一个线程。</p>
+<h2 id="线程介绍"><a href="#线程介绍" class="headerlink" title="线程介绍"></a>线程介绍</h2><blockquote>
+<p>启动的QQ聊天软件，需要和多个人进行聊天。这时多个人之间是不能相互影响，但是它们都位于当前QQ这个软件运行时所分配的内存的独立空间中。<br>在一个进程中，每个独立的功能都需要独立的去运行，这时又需要把当前这个进程划分成多个运行区域，每个独立的小区域（小单元）称为一个线程。<br>线程：它是位于进程中，负责当前进程中的某个具备独立运行资格的空间。<br>进程是负责整个程序的运行，而线程是程序中具体的某个独立功能的运行。一个进程中至少应该有一个线程。</p>
 </blockquote>
-<p>##多线程介绍</p>
-<blockquote>
-<p>现在的操作系统基本都是多用户，多任务的操作系统。每个任务就是一个进程。而在这个进程中就会有线程。<br>    真正可以完成程序运行和功能的实现靠的是进程中的线程。<br>多线程：在一个进程中，我们同时开启多个线程，让多个线程同时去完成某些任务（功能）。<br>(比如后台服务系统，就可以用多个线程同时响应多个客户的请求)<br>多线程的目的：提高程序的运行效率。</p>
+<h2 id="多线程介绍"><a href="#多线程介绍" class="headerlink" title="多线程介绍"></a>多线程介绍</h2><blockquote>
+<p>现在的操作系统基本都是多用户，多任务的操作系统。每个任务就是一个进程。而在这个进程中就会有线程。<br>真正可以完成程序运行和功能的实现靠的是进程中的线程。<br>多线程：在一个进程中，我们同时开启多个线程，让多个线程同时去完成某些任务（功能）。<br>(比如后台服务系统，就可以用多个线程同时响应多个客户的请求)<br>多线程的目的：提高程序的运行效率。</p>
 </blockquote>
-<p>##多线程运行的原理</p>
-<blockquote>
-<p>cpu在线程中做时间片的切换。<br>    其实真正电脑中的程序的运行不是同时在运行的。CPU负责程序的运行，而CPU在运行程序的过程中某个时刻点上，它其实只能运行一个程序。而不是多个程序。而CPU它可以在多个程序之间进行高速的切换。而切换频率和速度太快，导致人的肉眼看不到。<br> 个程序就是进程， 而每个进程中会有多个线程，而CPU是在这些线程之间进行切换。<br>了解了CPU对一个任务的执行过程，我们就必须知道，多线程可以提高程序的运行效率，但不能无限制的开线程。</p>
+<h2 id="多线程运行的原理"><a href="#多线程运行的原理" class="headerlink" title="多线程运行的原理"></a>多线程运行的原理</h2><blockquote>
+<p>cpu在线程中做时间片的切换。<br>其实真正电脑中的程序的运行不是同时在运行的。CPU负责程序的运行，而CPU在运行程序的过程中某个时刻点上，它其实只能运行一个程序。而不是多个程序。而CPU它可以在多个程序之间进行高速的切换。而切换频率和速度太快，导致人的肉眼看不到。<br>个程序就是进程， 而每个进程中会有多个线程，而CPU是在这些线程之间进行切换。<br>了解了CPU对一个任务的执行过程，我们就必须知道，多线程可以提高程序的运行效率，但不能无限制的开线程。</p>
 </blockquote>
-<p>##实现多线程的三种方式</p>
-<p>###第一种：继承Thread类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThreadWithExtends</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">	String flag;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyThreadWithExtends</span><span class="params">(String flag)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.flag = flag;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		String tname = Thread.currentThread().getName();</span><br><span class="line">		System.out.println(tname+<span class="string">"线程的run方法被调用……"</span>);</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)&#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				Thread.sleep(random.nextInt(<span class="number">10</span>)*<span class="number">100</span>);</span><br><span class="line">				System.out.println(tname+ <span class="string">"...."</span>+ flag);</span><br><span class="line">			&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Thread thread1 = <span class="keyword">new</span> MyThreadWithExtends(<span class="string">"a"</span>);</span><br><span class="line">		Thread thread2 = <span class="keyword">new</span> MyThreadWithExtends(<span class="string">"b"</span>);</span><br><span class="line">		thread1.start();</span><br><span class="line">		thread2.start();</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 如果是调用thread的run方法，则只是一个普通的方法调用，不会开启新的线程</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line"><span class="comment">//		thread1.run();</span></span><br><span class="line"><span class="comment">//		thread2.run();</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###第二种：实现Runnable接口</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThreadWithImpliment</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyThreadWithImpliment</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.x = x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		String name = Thread.currentThread().getName();</span><br><span class="line">		System.out.println(<span class="string">"线程"</span> + name + <span class="string">"的run方法被调用……"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">			System.out.println(x);</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				Thread.sleep(<span class="number">100</span>);</span><br><span class="line">				</span><br><span class="line">			&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Thread thread1 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> MyThreadWithImpliment(<span class="number">1</span>), <span class="string">"thread-1"</span>);</span><br><span class="line">		Thread thread2 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> MyThreadWithImpliment(<span class="number">2</span>), <span class="string">"thread-2"</span>);</span><br><span class="line">		 thread1.start();</span><br><span class="line">		 thread2.start();</span><br><span class="line">		<span class="comment">// 注意调用run和调用start的区别,直接调用run，则都运行在main线程中</span></span><br><span class="line"><span class="comment">//		thread1.run();</span></span><br><span class="line"><span class="comment">//		thread2.run();</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###第三种：线程池</p>
-<p>####线程池的5种创建方式</p>
+<h2 id="实现多线程的三种方式"><a href="#实现多线程的三种方式" class="headerlink" title="实现多线程的三种方式"></a>实现多线程的三种方式</h2><h3 id="第一种：继承Thread类"><a href="#第一种：继承Thread类" class="headerlink" title="第一种：继承Thread类"></a>第一种：继承Thread类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class MyThreadWithExtends extends Thread &#123;</span><br><span class="line">	String flag;</span><br><span class="line">	</span><br><span class="line">	public MyThreadWithExtends(String flag)&#123;</span><br><span class="line">		this.flag = flag;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void run() &#123;</span><br><span class="line">		String tname = Thread.currentThread().getName();</span><br><span class="line">		System.out.println(tname+&quot;线程的run方法被调用……&quot;);</span><br><span class="line">		Random random = new Random();</span><br><span class="line">		for(int i=0;i&lt;20;i++)&#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				Thread.sleep(random.nextInt(10)*100);</span><br><span class="line">				System.out.println(tname+ &quot;....&quot;+ flag);</span><br><span class="line">			&#125; catch (InterruptedException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Thread thread1 = new MyThreadWithExtends(&quot;a&quot;);</span><br><span class="line">		Thread thread2 = new MyThreadWithExtends(&quot;b&quot;);</span><br><span class="line">		thread1.start();</span><br><span class="line">		thread2.start();</span><br><span class="line">		/**</span><br><span class="line">		 * 如果是调用thread的run方法，则只是一个普通的方法调用，不会开启新的线程</span><br><span class="line">		 */</span><br><span class="line">//		thread1.run();</span><br><span class="line">//		thread2.run();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第二种：实现Runnable接口"><a href="#第二种：实现Runnable接口" class="headerlink" title="第二种：实现Runnable接口"></a>第二种：实现Runnable接口</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public class MyThreadWithImpliment implements Runnable &#123;</span><br><span class="line">	int x;</span><br><span class="line"></span><br><span class="line">	public MyThreadWithImpliment(int x) &#123;</span><br><span class="line">		this.x = x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void run() &#123;</span><br><span class="line">		String name = Thread.currentThread().getName();</span><br><span class="line">		System.out.println(&quot;线程&quot; + name + &quot;的run方法被调用……&quot;);</span><br><span class="line">		for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">			System.out.println(x);</span><br><span class="line">			try &#123;</span><br><span class="line">				Thread.sleep(100);</span><br><span class="line">				</span><br><span class="line">			&#125; catch (InterruptedException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Thread thread1 = new Thread(new MyThreadWithImpliment(1), &quot;thread-1&quot;);</span><br><span class="line">		Thread thread2 = new Thread(new MyThreadWithImpliment(2), &quot;thread-2&quot;);</span><br><span class="line">		 thread1.start();</span><br><span class="line">		 thread2.start();</span><br><span class="line">		// 注意调用run和调用start的区别,直接调用run，则都运行在main线程中</span><br><span class="line">//		thread1.run();</span><br><span class="line">//		thread2.run();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三种：线程池"><a href="#第三种：线程池" class="headerlink" title="第三种：线程池"></a>第三种：线程池</h3><h4 id="线程池的5种创建方式"><a href="#线程池的5种创建方式" class="headerlink" title="线程池的5种创建方式"></a>线程池的5种创建方式</h4><ul>
+<li><p>Single Thread Executor : 只有一个线程的线程池，因此所有提交的任务是顺序执行。</p>
 <ul>
-<li>Single Thread Executor : 只有一个线程的线程池，因此所有提交的任务是顺序执行。<ul>
 <li>代码：<code>Executors.newSingleThreadExecutor()</code></li>
 </ul>
 </li>
-<li>Cached Thread Pool : 线程池里有很多线程需要同时执行，老的可用线程将被新的任务触发重新执行，如果线程超过60秒内没执行，那么将被终止并从池中删除。<ul>
+<li><p>Cached Thread Pool : 线程池里有很多线程需要同时执行，老的可用线程将被新的任务触发重新执行，如果线程超过60秒内没执行，那么将被终止并从池中删除。</p>
+<ul>
 <li>代码：<code>Executors.newCachedThreadPool()</code></li>
 </ul>
 </li>
-<li>Fixed Thread Pool : 拥有固定线程数的线程池，如果没有任务执行，那么线程会一直等待。<ul>
-<li>代码：<code>Executors.newFixedThreadPool(4)</code><blockquote>
+<li><p>Fixed Thread Pool : 拥有固定线程数的线程池，如果没有任务执行，那么线程会一直等待。</p>
+<ul>
+<li><p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Executors.newFixedThreadPool(4)</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>在构造函数中的参数4是线程池的大小，你可以随意设置，也可以和cpu的核数量保持一致，获取cpu的核数量int cpuNums = Runtime.getRuntime().availableProcessors();</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li>Scheduled Thread Pool : 用来调度即将执行的任务的线程池，可能是不是直接执行, 每隔多久执行一次… 策略型的。<ul>
+<li><p>Scheduled Thread Pool : 用来调度即将执行的任务的线程池，可能是不是直接执行, 每隔多久执行一次… 策略型的。</p>
+<ul>
 <li>代码：<code>Executors.newScheduledThreadPool()</code></li>
 </ul>
 </li>
-<li>Single Thread Scheduled Pool : 只有一个线程，用来调度任务在指定时间执行。<ul>
+<li><p>Single Thread Scheduled Pool : 只有一个线程，用来调度任务在指定时间执行。</p>
+<ul>
 <li>代码：<code>Executors.newSingleThreadScheduledExecutor()</code><br>​<br>####线程池的使用</li>
 </ul>
 </li>
 <li><p>传入 Runnable ，任务完成后 Future 对象返回 null</p>
 <ul>
-<li>调用excute提交任务，匿名Runable重写run方法, run方法里是业务逻辑</li>
-<li>调用shutdown，关闭线程池。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPoolWithRunable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 通过线程池执行线程</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//创建一个线程池</span></span><br><span class="line">		ExecutorService pool = Executors.newCachedThreadPool();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++)&#123;</span><br><span class="line">			pool.execute(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">				<span class="meta">@Override</span></span><br><span class="line">				<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">					System.out.println(<span class="string">"thread name: "</span> + Thread.currentThread().getName());</span><br><span class="line">					<span class="keyword">try</span> &#123;</span><br><span class="line">						Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">					&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">						e.printStackTrace();</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">		pool.shutdown();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>调用excute提交任务，匿名Runable重写run方法, run方法里是业务逻辑</p>
+</li>
+<li><p>调用shutdown，关闭线程池。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class ThreadPoolWithRunable &#123;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 通过线程池执行线程</span><br><span class="line">	 * @param args</span><br><span class="line">	 */</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//创建一个线程池</span><br><span class="line">		ExecutorService pool = Executors.newCachedThreadPool();</span><br><span class="line">		for(int i = 1; i &lt; 5; i++)&#123;</span><br><span class="line">			pool.execute(new Runnable() &#123;</span><br><span class="line">				@Override</span><br><span class="line">				public void run() &#123;</span><br><span class="line">					System.out.println(&quot;thread name: &quot; + Thread.currentThread().getName());</span><br><span class="line">					try &#123;</span><br><span class="line">						Thread.sleep(1000);</span><br><span class="line">					&#125; catch (InterruptedException e) &#123;</span><br><span class="line">						e.printStackTrace();</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">		pool.shutdown();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -551,6 +556,8 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
+            <a href="/tags/多线程/" rel="tag"># 多线程</a>
+          
         </div>
       
 
@@ -568,8 +575,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/09/centOS7安装mysql5.7/" rel="prev" title="centOS7安装mysql5.7">
-                centOS7安装mysql5.7 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/09/VMware虚拟机三种联网方法及原理/" rel="prev" title="VMware虚拟机三种联网方法及原理">
+                VMware虚拟机三种联网方法及原理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -635,8 +642,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -655,7 +671,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,7 +682,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -677,7 +693,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -707,6 +723,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#同步和异步的区别"><span class="nav-number">1.</span> <span class="nav-text">同步和异步的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程介绍"><span class="nav-number">2.</span> <span class="nav-text">线程介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程介绍"><span class="nav-number">3.</span> <span class="nav-text">多线程介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程运行的原理"><span class="nav-number">4.</span> <span class="nav-text">多线程运行的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现多线程的三种方式"><span class="nav-number">5.</span> <span class="nav-text">实现多线程的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种：继承Thread类"><span class="nav-number">5.1.</span> <span class="nav-text">第一种：继承Thread类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种：实现Runnable接口"><span class="nav-number">5.2.</span> <span class="nav-text">第二种：实现Runnable接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三种：线程池"><span class="nav-number">5.3.</span> <span class="nav-text">第三种：线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池的5种创建方式"><span class="nav-number">5.3.1.</span> <span class="nav-text">线程池的5种创建方式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java,Mybatis,Mapper," />
+  <meta name="keywords" content="Linux,VMWare," />
 
 
 
@@ -81,20 +81,22 @@
 
 
 
-<meta name="description" content="Spring Boot 1.5.1.RELEASE mybatis-spring-boot-starter mapper-spring-boot-starter pagehelper-spring-boot-starter  新书《MyBatis 从入门到精通》 预售地址：京东，当当，亚马逊 CSDN博客：http://blog.csdn.net/isea533/article/details/">
-<meta name="keywords" content="Java,Mybatis,Mapper">
+<meta name="description" content="Brigde——桥接：默认使用VMnet0原理： Bridge 桥”就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在”桥”上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理网卡应该处于同一IP网段 当然要保证两个局域网没有冲突的IP. VMWare 的桥也是同样的道理，只不过，本来作为硬">
+<meta name="keywords" content="Linux,VMWare">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper">
-<meta property="og:url" content="http://yoursite.com/2018/02/01/集成分页助手、通用mapper/index.html">
+<meta property="og:title" content="VMware虚拟机三种联网方法及原理">
+<meta property="og:url" content="http://yoursite.com/2016/01/09/VMware虚拟机三种联网方法及原理/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="Spring Boot 1.5.1.RELEASE mybatis-spring-boot-starter mapper-spring-boot-starter pagehelper-spring-boot-starter  新书《MyBatis 从入门到精通》 预售地址：京东，当当，亚马逊 CSDN博客：http://blog.csdn.net/isea533/article/details/">
+<meta property="og:description" content="Brigde——桥接：默认使用VMnet0原理： Bridge 桥”就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在”桥”上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理网卡应该处于同一IP网段 当然要保证两个局域网没有冲突的IP. VMWare 的桥也是同样的道理，只不过，本来作为硬">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/mybatis-book/book/raw/master/book.png">
-<meta property="og:updated_time" content="2018-03-08T11:52:21.129Z">
+<meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/8ieD0J2AJ1.png">
+<meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/I6Fm3lII0K.png">
+<meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/CBdiE8aGLc.png">
+<meta property="og:updated_time" content="2018-03-12T11:00:09.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper">
-<meta name="twitter:description" content="Spring Boot 1.5.1.RELEASE mybatis-spring-boot-starter mapper-spring-boot-starter pagehelper-spring-boot-starter  新书《MyBatis 从入门到精通》 预售地址：京东，当当，亚马逊 CSDN博客：http://blog.csdn.net/isea533/article/details/">
-<meta name="twitter:image" content="https://github.com/mybatis-book/book/raw/master/book.png">
+<meta name="twitter:title" content="VMware虚拟机三种联网方法及原理">
+<meta name="twitter:description" content="Brigde——桥接：默认使用VMnet0原理： Bridge 桥”就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在”桥”上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理网卡应该处于同一IP网段 当然要保证两个局域网没有冲突的IP. VMWare 的桥也是同样的道理，只不过，本来作为硬">
+<meta name="twitter:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/8ieD0J2AJ1.png">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/01/集成分页助手、通用mapper/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/01/09/VMware虚拟机三种联网方法及原理/"/>
 
 
 
 
 
-  <title>Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper | Wei.Cao</title>
+  <title>VMware虚拟机三种联网方法及原理 | Wei.Cao</title>
   
 
 
@@ -311,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/集成分页助手、通用mapper/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/09/VMware虚拟机三种联网方法及原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wei.Cao">
@@ -328,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper</h1>
+          <h1 class="post-title" itemprop="name headline">VMware虚拟机三种联网方法及原理</h1>
         
 
         <div class="post-meta">
@@ -340,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T11:50:35+08:00">
-                2018-02-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-09T11:50:35+08:00">
+                2016-01-09
               </time>
             
 
@@ -363,8 +365,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -381,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/01/集成分页助手、通用mapper/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/02/01/集成分页助手、通用mapper/" itemprop="commentsCount"></span>
+                <a href="/2016/01/09/VMware虚拟机三种联网方法及原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2016/01/09/VMware虚拟机三种联网方法及原理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -410,42 +412,54 @@
       
 
       
-        <ul>
-<li><a href="https://github.com/spring-projects/spring-boot" target="_blank" rel="noopener">Spring Boot 1.5.1.RELEASE</a></li>
-<li><a href="https://github.com/mybatis/spring-boot-starter" target="_blank" rel="noopener">mybatis-spring-boot-starter</a></li>
-<li><a href="https://github.com/abel533/mapper-boot-starter" target="_blank" rel="noopener">mapper-spring-boot-starter</a></li>
-<li><a href="https://github.com/pagehelper/pagehelper-spring-boot" target="_blank" rel="noopener">pagehelper-spring-boot-starter</a></li>
+        <h2 id="Brigde——桥接：默认使用VMnet0"><a href="#Brigde——桥接：默认使用VMnet0" class="headerlink" title="Brigde——桥接：默认使用VMnet0"></a>Brigde——桥接：默认使用VMnet0</h2><h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><ul>
+<li>Bridge 桥”就是一个主机，这个机器拥有两块网卡，分别处于两个局域网中，同时在”桥”上，运行着程序，让局域网A中的所有数据包原封不动的流入B，反之亦然。这样，局域网A和B就无缝的在链路层连接起来了，在桥接时，VMWare网卡和物理网卡应该处于同一IP网段 当然要保证两个局域网没有冲突的IP.</li>
+<li>VMWare 的桥也是同样的道理，只不过，本来作为硬件的一块网卡，现在由VMWare软件虚拟了！当采用桥接时，VMWare会虚拟一块网卡和真正的物理网卡就行桥接，这样，发到物理网卡的所有数据包就到了VMWare虚拟机，而由VMWare发出的数据包也会通过桥从物理网卡的那端发出。</li>
+<li>所以，如果物理网卡可以上网，那么桥接的软网卡也没有问题了，这就是桥接上网的原理了。 　　<br>###联网方式：</li>
+<li>这一种联网方式最简单，在局域网内，你的主机是怎么联网的，你在虚拟机里就怎么连网。把虚拟机看成局域网内的另一台电脑就行了！</li>
+<li><strong>注意</strong>：主机网卡处在一个可以访问Internet的局域网中，虚拟机才能通过Bridge访问Internet。<br><a href="http://ou9crezlk.bkt.clouddn.com/blog/170831/8ieD0J2AJ1.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/8ieD0J2AJ1.png" alt="mark"></a></li>
 </ul>
-<h2 id="新书《MyBatis-从入门到精通》"><a href="#新书《MyBatis-从入门到精通》" class="headerlink" title="新书《MyBatis 从入门到精通》"></a>新书《MyBatis 从入门到精通》</h2><p><a href="https://github.com/mybatis-book/book/raw/master/book.png" target="_blank" rel="noopener"><img src="https://github.com/mybatis-book/book/raw/master/book.png" alt="MyBatis 从入门到精通"></a></p>
-<p>预售地址：<a href="https://item.jd.com/12103309.html" target="_blank" rel="noopener">京东</a>，<a href="http://product.dangdang.com/25098208.html" target="_blank" rel="noopener">当当</a>，<a href="https://www.amazon.cn/MyBatis%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A-%E5%88%98%E5%A2%9E%E8%BE%89/dp/B072RC11DM/ref=sr_1_18?ie=UTF8&amp;qid=1498007125&amp;sr=8-18&amp;keywords=mybatis" target="_blank" rel="noopener">亚马逊</a></p>
-<p>CSDN博客：<a href="http://blog.csdn.net/isea533/article/details/73555400" target="_blank" rel="noopener">http://blog.csdn.net/isea533/article/details/73555400</a></p>
-<p>GitHub项目：<a href="https://github.com/mybatis-book/book" target="_blank" rel="noopener">https://github.com/mybatis-book/book</a></p>
-<h2 id="项目依赖"><a href="#项目依赖" class="headerlink" title="项目依赖"></a>项目依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--mybatis--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.3.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--mapper--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mapper-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.1.4&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--pagehelper--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.2.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Spring-DevTools-配置"><a href="#Spring-DevTools-配置" class="headerlink" title="Spring DevTools 配置"></a>Spring DevTools 配置</h2><p>感谢<a href="https://github.com/emf1002" target="_blank" rel="noopener">emf1002</a>提供的解决方案。</p>
-<p>在使用 DevTools 时，通用Mapper经常会出现 class x.x.A cannot be cast to x.x.A。</p>
-<p>同一个类如果使用了不同的类加载器，就会产生这样的错误，所以解决方案就是让通用Mapper和实体类使用相同的类加载器即可。</p>
-<p>DevTools 默认会对 IDE 中引入的所有项目使用 restart 类加载器，对于引入的 jar 包使用 base 类加载器，因此只要保证通用Mapper的jar包使用 restart 类加载器即可。</p>
-<p>在 <code>src/main/resources</code> 中创建 META-INF 目录，在此目录下添加 spring-devtools.properties 配置，内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">restart.include.mapper=/mapper-[\\w-\\.]+jar</span><br><span class="line">restart.include.pagehelper=/pagehelper-[\\w-\\.]+jar</span><br></pre></td></tr></table></figure>
-<p>使用这个配置后，就会使用 restart 类加载加载 include 进去的 jar 包。</p>
-<h2 id="集成-MyBatis-Generator"><a href="#集成-MyBatis-Generator" class="headerlink" title="集成 MyBatis Generator"></a>集成 MyBatis Generator</h2><p>通过 Maven 插件集成的，所以运行插件使用下面的命令：</p>
+<h2 id="NAT——网络地址转换-：默认使用VMnet8"><a href="#NAT——网络地址转换-：默认使用VMnet8" class="headerlink" title="NAT——网络地址转换 ：默认使用VMnet8"></a>NAT——网络地址转换 ：默认使用VMnet8</h2><h3 id="原理：-1"><a href="#原理：-1" class="headerlink" title="原理："></a>原理：</h3><ul>
+<li>NAT 是 Network address translate的简称。NAT技术应用在internet网关和路由器上，比如192.168.0.123这个地址要访问internet，它的数据包就要通过一个网关或者路由器，而网关或者路由器拥有一个能访问internet的ip地址，这样的网关和路由器就要在收发数据包时，对数据包的IP协议层数据进行更改（即 NAT），以使私有网段的主机能够顺利访问internet。此技术解决了IP地址稀缺的问题。同样的私有IP可以网关NAT 上网。</li>
+<li>VMWare的NAT上网也是同样的道理，它在主机和虚拟机之间用软件伪造出一块网卡，这块网卡和虚拟机的ip处于一个地址段。同时，在这块网卡和主机的网络接口之间进行NAT。虚拟机发出的每一块数据包都会经过虚拟网卡，然后NAT，然后由主机的接口发出。</li>
+<li>虚拟网卡和虚拟机处于一个地址段，虚拟机和主机不同一个地址段，主机相当于虚拟机的网关，所以虚拟机能ping到主机的IP，但是主机ping不到虚拟机的IP。</li>
+</ul>
+<h3 id="联网方式："><a href="#联网方式：" class="headerlink" title="联网方式："></a>联网方式：</h3><ul>
+<li>方法1、动态IP地址。<ul>
+<li>主机是静态IP或动态IP，都无所谓，将虚拟机设置成使用DHCP方式上网,Windows下选择“自动获取IP“，linux下开启DHCP服务即可。（这种方法最简单，不用过多的设置，但要在VMware中进行“编辑→虚拟网络设置”，将NAT和DHCP都开启了。一般NAT默认开启，DHCP默认关闭）</li>
+</ul>
+</li>
+<li>方法2、静态IP地址。<ul>
+<li>如果不想使用DHCP，也可以手动设置：　</li>
+<li>IP设置与vmnet1同网段,网关设置成vmnet8的网关（在“虚拟网络设置”里的Net选项卡里能找到Gateway）通常是xxx.xxx.xxx.2。<br>子网掩码设置与VMnet8相同（设置好IP地址后，子网掩码自动生成）<br>DNS设置与主机相同。</li>
+<li>例如：主机IP是10.70.54.31,设置虚拟机IP为10.70.54.22。Netmask,Gateway,DNS都与主机相同即可实现 虚拟机 —主机 虚拟机<---->互联网 通信。</----></li>
+</ul>
+</li>
+<li><strong>注意</strong>：使用NAT技术，主机能上网，虚拟机就可以访问Internet，但是主机不能访问虚拟机。<br><a href="http://ou9crezlk.bkt.clouddn.com/blog/170831/I6Fm3lII0K.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/I6Fm3lII0K.png" alt="mark"></a></li>
+</ul>
+<h2 id="Host-Only——私有网络共享主机：默认使用VMnet1"><a href="#Host-Only——私有网络共享主机：默认使用VMnet1" class="headerlink" title="Host-Only——私有网络共享主机：默认使用VMnet1"></a>Host-Only——私有网络共享主机：默认使用VMnet1</h2><h3 id="原理：-2"><a href="#原理：-2" class="headerlink" title="原理："></a>原理：</h3><ul>
+<li>提供的是主机和虚拟机之间的网络互访。只想让虚拟机和主机之间有数据交换，而不想让虚拟机访问Internet，就要采用这个设置了。</li>
+<li>Host-only的条件下，VMWare在真正的Windows系统中，建立一块软网卡。这块网卡可以在网络连接中看到，一般是VMNET1，这块网卡的作用就是使Windows看到虚拟机的IP。</li>
+</ul>
+<h3 id="联网方法："><a href="#联网方法：" class="headerlink" title="联网方法："></a>联网方法：</h3><ul>
+<li><p>方法1、动态IP地址。</p>
+<ul>
+<li>像上面那样开启DHCP后，虚拟机直接自动获取IP地址和DNS。就可以和主机相连了。当然，还要进行一些局域网共享的操作，这里不再赘述。</li>
+</ul>
+</li>
+<li><p>方法2、静态IP地址。</p>
+<ul>
+<li><p>也可以手动设置，将虚拟机IP设置与VMnet1同网段,网关设置成VMnet1的网关相同,其余设置与VMnet1相同,DNS设置与主机相同。</p>
+</li>
+<li><p>例如：</p>
 <blockquote>
-<p>mvn mybatis-generator:generate</p>
+<p>VMnet1 IP:172.16.249.1 Gateway :172.16.249.2<br>么虚拟机 IP:172.16.249.100 Gateway: 172.16.249.2<br>样、 虚拟机<--->主机 可以通信<br>是、 虚拟机<--->互联网 无法通信</---></---></p>
 </blockquote>
-<p>Mybatis Geneator 详解:</p>
-<blockquote>
-<p><a href="http://blog.csdn.net/isea533/article/details/42102297" target="_blank" rel="noopener">http://blog.csdn.net/isea533/article/details/42102297</a></p>
-</blockquote>
-<h2 id="application-properties-配置"><a href="#application-properties-配置" class="headerlink" title="application.properties 配置"></a>application.properties 配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#mybatis</span><br><span class="line">mybatis.type-aliases-package=tk.mybatis.springboot.model #表对应实体类的存放路径</span><br><span class="line">mybatis.mapper-locations=classpath:mapper/*.xml	#mapper的xml文件路径</span><br><span class="line"></span><br><span class="line">#mapper</span><br><span class="line">#mappers 多个接口时逗号隔开</span><br><span class="line">mapper.mappers=com.springboot.demo.MyMapper #自己的mapper</span><br><span class="line">mapper.not-empty=false</span><br><span class="line">mapper.identity=MYSQL</span><br><span class="line"></span><br><span class="line">#pagehelper</span><br><span class="line">pagehelper.helperDialect=mysql</span><br><span class="line">pagehelper.reasonable=true</span><br><span class="line">pagehelper.supportMethodsArguments=true</span><br><span class="line">pagehelper.params=count=countSql</span><br></pre></td></tr></table></figure>
-<h2 id="application-yml-配置"><a href="#application-yml-配置" class="headerlink" title="application.yml 配置"></a>application.yml 配置</h2><p>完整配置可以参考 <a href="https://github.com/abel533/MyBatis-Spring-Boot/blob/master/src/main/resources/application-old.yml" target="_blank" rel="noopener">src/main/resources/application-old.yml</a> ，和 MyBatis 相关的部分配置如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mybatis配置</span></span><br><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">    <span class="comment">#sql表映射的实体类路径</span></span><br><span class="line"><span class="attr">    type-aliases-package:</span> <span class="string">com.springboot.demo.bean</span></span><br><span class="line">    <span class="comment">#mapper的xml文件</span></span><br><span class="line"><span class="attr">    mapper-locations:</span> <span class="attr">classpath:mapper/*.xml</span></span><br><span class="line"><span class="comment">#通用mapper</span></span><br><span class="line"><span class="attr">mapper:</span></span><br><span class="line"><span class="attr">    mappers:</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">com.springboot.demo.util.MyMapper</span></span><br><span class="line"><span class="attr">    not-empty:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    identity:</span> <span class="string">MYSQL</span></span><br><span class="line"><span class="comment">#分页助手</span></span><br><span class="line"><span class="attr">pagehelper:</span></span><br><span class="line"><span class="attr">    helperDialect:</span> <span class="string">mysql</span></span><br><span class="line"><span class="attr">    reasonable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    supportMethodsArguments:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    params:</span> <span class="string">count=countSql</span></span><br><span class="line"><span class="comment">#数据源</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  datasource:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">jdbc:mysql://localhost:3306/test</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">root</span></span><br><span class="line"><span class="attr">    password:</span> <span class="string">root</span></span><br><span class="line"><span class="attr">    driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure>
-<p>注意 mapper 配置，因为参数名固定，所以接收参数使用的对象，按照 Spring Boot 配置规则，大写字母都变了带横线的小写字母。针对如 IDENTITY（对应i-d-e-n-t-i-t-y）提供了全小写的 identity 配置，如果 IDE 能自动提示，看自动提示即可。</p>
-<h2 id="SSM集成的基础项目"><a href="#SSM集成的基础项目" class="headerlink" title="SSM集成的基础项目"></a>SSM集成的基础项目</h2><blockquote>
-<p><a href="https://github.com/abel533/Mybatis-Spring" target="_blank" rel="noopener">https://github.com/abel533/Mybatis-Spring</a></p>
-</blockquote>
-<h2 id="MyBatis工具-http-www-mybatis-tk"><a href="#MyBatis工具-http-www-mybatis-tk" class="headerlink" title="MyBatis工具 http://www.mybatis.tk"></a>MyBatis工具 <a href="http://www.mybatis.tk/" target="_blank" rel="noopener">http://www.mybatis.tk</a></h2><ul>
-<li>推荐使用 Mybatis 通用 Mapper3 <a href="https://github.com/abel533/Mapper" target="_blank" rel="noopener">https://github.com/abel533/Mapper</a></li>
-<li>推荐使用 Mybatis 分页插件 PageHelper <a href="https://github.com/pagehelper/Mybatis-PageHelper" target="_blank" rel="noopener">https://github.com/pagehelper/Mybatis-PageHelper</a></li>
+</li>
+</ul>
+</li>
+<li><p><strong>注意</strong>：Host-only技术只用于主机和虚拟机互访，于访问internet无关。<br><a href="http://ou9crezlk.bkt.clouddn.com/blog/170831/CBdiE8aGLc.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/CBdiE8aGLc.png" alt="mark"></a></p>
+</li>
 </ul>
 
       
@@ -496,7 +510,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/02/01/集成分页助手、通用mapper/" title="Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper">http://yoursite.com/2018/02/01/集成分页助手、通用mapper/</a>
+    <a href="http://yoursite.com/2016/01/09/VMware虚拟机三种联网方法及原理/" title="VMware虚拟机三种联网方法及原理">http://yoursite.com/2016/01/09/VMware虚拟机三种联网方法及原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -511,11 +525,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
-            <a href="/tags/Mybatis/" rel="tag"># Mybatis</a>
-          
-            <a href="/tags/Mapper/" rel="tag"># Mapper</a>
+            <a href="/tags/VMWare/" rel="tag"># VMWare</a>
           
         </div>
       
@@ -528,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/01/使用Mapper专用的MyBatis Generator插件/" rel="next" title="使用Mapper专用的MyBatis Generator插件">
-                <i class="fa fa-chevron-left"></i> 使用Mapper专用的MyBatis Generator插件
+              <a href="/2016/01/02/java多线程基础/" rel="next" title="java多线程基础学习">
+                <i class="fa fa-chevron-left"></i> java多线程基础学习
               </a>
             
           </div>
@@ -537,6 +549,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/09/CentOS6.7最小化安装版安装mysql5.6/" rel="prev" title="CentOS6.7最小化安装版安装mysql5.6">
+                CentOS6.7最小化安装版安装mysql5.6 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -630,7 +646,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -641,7 +657,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -652,7 +668,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -692,7 +708,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新书《MyBatis-从入门到精通》"><span class="nav-number">1.</span> <span class="nav-text">新书《MyBatis 从入门到精通》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目依赖"><span class="nav-number">2.</span> <span class="nav-text">项目依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-DevTools-配置"><span class="nav-number">3.</span> <span class="nav-text">Spring DevTools 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成-MyBatis-Generator"><span class="nav-number">4.</span> <span class="nav-text">集成 MyBatis Generator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#application-properties-配置"><span class="nav-number">5.</span> <span class="nav-text">application.properties 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#application-yml-配置"><span class="nav-number">6.</span> <span class="nav-text">application.yml 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSM集成的基础项目"><span class="nav-number">7.</span> <span class="nav-text">SSM集成的基础项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MyBatis工具-http-www-mybatis-tk"><span class="nav-number">8.</span> <span class="nav-text">MyBatis工具 http://www.mybatis.tk</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Brigde——桥接：默认使用VMnet0"><span class="nav-number">1.</span> <span class="nav-text">Brigde——桥接：默认使用VMnet0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理："><span class="nav-number">1.1.</span> <span class="nav-text">原理：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT——网络地址转换-：默认使用VMnet8"><span class="nav-number">2.</span> <span class="nav-text">NAT——网络地址转换 ：默认使用VMnet8</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理：-1"><span class="nav-number">2.1.</span> <span class="nav-text">原理：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联网方式："><span class="nav-number">2.2.</span> <span class="nav-text">联网方式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Host-Only——私有网络共享主机：默认使用VMnet1"><span class="nav-number">3.</span> <span class="nav-text">Host-Only——私有网络共享主机：默认使用VMnet1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理：-2"><span class="nav-number">3.1.</span> <span class="nav-text">原理：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联网方法："><span class="nav-number">3.2.</span> <span class="nav-text">联网方法：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -892,7 +908,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1517457035000', 
+            id: '1452311435000', 
             owner: 'huaxiaowei',
             repo: 'gitment-comments',
             

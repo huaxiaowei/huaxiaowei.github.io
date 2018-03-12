@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="##sort命令  sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。  ###sort语法  sort [-fbMnrtuk] [file or stdin]选项与参数： f  ：忽略大小写的差异，例如 A 与 a 视为编码相同； b  ：忽略最前面的空格符部分； M  ：">
+<meta name="description" content="sort命令 sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。  sort语法 sort [-fbMnrtuk] [file or stdin]选项与参数：f ：忽略大小写的差异，例如 A 与 a 视为编码相同；b ：忽略最前面的空格符部分；M ：以月份的名字来排序，例如">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux sort 排序命令&amp;&amp;uniq去重复行">
 <meta property="og:url" content="http://yoursite.com/2016/04/02/Linux sort 排序命令&&uniq去重复行/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##sort命令  sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。  ###sort语法  sort [-fbMnrtuk] [file or stdin]选项与参数： f  ：忽略大小写的差异，例如 A 与 a 视为编码相同； b  ：忽略最前面的空格符部分； M  ：">
+<meta property="og:description" content="sort命令 sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。  sort语法 sort [-fbMnrtuk] [file or stdin]选项与参数：f ：忽略大小写的差异，例如 A 与 a 视为编码相同；b ：忽略最前面的空格符部分；M ：以月份的名字来排序，例如">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T11:46:27.002Z">
+<meta property="og:updated_time" content="2018-03-12T09:49:41.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux sort 排序命令&amp;&amp;uniq去重复行">
-<meta name="twitter:description" content="##sort命令  sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。  ###sort语法  sort [-fbMnrtuk] [file or stdin]选项与参数： f  ：忽略大小写的差异，例如 A 与 a 视为编码相同； b  ：忽略最前面的空格符部分； M  ：">
+<meta name="twitter:description" content="sort命令 sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。  sort语法 sort [-fbMnrtuk] [file or stdin]选项与参数：f ：忽略大小写的差异，例如 A 与 a 视为编码相同；b ：忽略最前面的空格符部分；M ：以月份的名字来排序，例如">
 
 
 
@@ -408,20 +408,19 @@
       
 
       
-        <p>##sort命令</p>
-<ul>
+        <h2 id="sort命令"><a href="#sort命令" class="headerlink" title="sort命令"></a>sort命令</h2><ul>
 <li>sort 命令对 File 参数指定的文件中的行排序，并将结果写到标准输出。如果 File 参数指定多个文件，那么 sort 命令将这些文件连接起来，并当作一个文件进行排序。</li>
 </ul>
-<p>###sort语法</p>
-<blockquote>
-<p>sort [-fbMnrtuk] [file or stdin]<br>选项与参数：<br> f  ：忽略大小写的差异，例如 A 与 a 视为编码相同；<br> b  ：忽略最前面的空格符部分；<br> M  ：以月份的名字来排序，例如 JAN, DEC 等等的排序方法；<br> n  ：使用『纯数字』进行排序(默认是以文字型态来排序的)；<br> r  ：反向排序；<br> u  ：就是 uniq ，相同的数据中，仅出现一行代表；<br> t  ：分隔符，默认是用 [tab] 键来分隔；<br> k  ：以那个区间 (field) 来进行排序的意思</p>
+<h3 id="sort语法"><a href="#sort语法" class="headerlink" title="sort语法"></a>sort语法</h3><blockquote>
+<p>sort [-fbMnrtuk] [file or stdin]<br>选项与参数：<br>f ：忽略大小写的差异，例如 A 与 a 视为编码相同；<br>b ：忽略最前面的空格符部分；<br>M ：以月份的名字来排序，例如 JAN, DEC 等等的排序方法；<br>n ：使用『纯数字』进行排序(默认是以文字型态来排序的)；<br>r ：反向排序；<br>u ：就是 uniq ，相同的数据中，仅出现一行代表；<br>t ：分隔符，默认是用 [tab] 键来分隔；<br>k ：以那个区间 (field) 来进行排序的意思</p>
 </blockquote>
-<p>###举个栗子</p>
-<ul>
+<h3 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h3><ul>
 <li><p>对/etc/passwd 的账号进行排序</p>
 <ul>
-<li>语句：<code>cat /etc/passwd | sort</code></li>
-<li>结果：sort 是默认以第一个数据来排序，而且默认是以字符串形式来排序,所以由字母 a 开始升序排序。<blockquote>
+<li><p>语句：<code>cat /etc/passwd | sort</code></p>
+</li>
+<li><p>结果：sort 是默认以第一个数据来排序，而且默认是以字符串形式来排序,所以由字母 a 开始升序排序。</p>
+<blockquote>
 <p>adm:x:3:4:adm:/var/adm:/sbin/nologin<br>apache:x:48:48:Apache:/var/www:/sbin/nologin<br>bin:x:1:1:bin:/bin:/sbin/nologin<br>daemon:x:2:2:daemon:/sbin:/sbin/nologin</p>
 </blockquote>
 </li>
@@ -429,8 +428,10 @@
 </li>
 <li><p>以 : 来分隔的，以第三栏来排序</p>
 <ul>
-<li>语句：<code>cat /etc/passwd | sort -t &#39;:&#39; -k 3</code></li>
-<li>结果：<blockquote>
+<li><p>语句：<code>cat /etc/passwd | sort -t &#39;:&#39; -k 3</code></p>
+</li>
+<li><p>结果：</p>
+<blockquote>
 <p>root:x:0:0:root:/root:/bin/bash<br>uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin<br>operator:x:11:0:operator:/root:/sbin/nologin<br>bin:x:1:1:bin:/bin:/sbin/nologin<br>games:x:12:100:games:/usr/games:/sbin/nologin</p>
 </blockquote>
 </li>
@@ -438,8 +439,10 @@
 </li>
 <li><p>默认是以字符串来排序的，如果想要使用数字排序：</p>
 <ul>
-<li>语句：<code>cat /etc/passwd | sort -t &#39;:&#39; -k 3n</code></li>
-<li>结果：<blockquote>
+<li><p>语句：<code>cat /etc/passwd | sort -t &#39;:&#39; -k 3n</code></p>
+</li>
+<li><p>结果：</p>
+<blockquote>
 <p>root:x:0:0:root:/root:/bin/bash<br>daemon:x:1:1:daemon:/usr/sbin:/bin/sh<br>bin:x:2:2:bin:/bin:/bin/sh</p>
 </blockquote>
 </li>
@@ -447,8 +450,10 @@
 </li>
 <li><p>默认是升序排序，如果要倒序排序，如下</p>
 <ul>
-<li>语句：<code>/etc/passwd | sort -t &#39;:&#39; -k 3nr</code></li>
-<li>结果：<blockquote>
+<li><p>语句：<code>/etc/passwd | sort -t &#39;:&#39; -k 3nr</code></p>
+</li>
+<li><p>结果：</p>
+<blockquote>
 <p>nobody:x:65534:65534:nobody:/nonexistent:/bin/sh<br>ntp:x:106:113::/home/ntp:/bin/false<br>messagebus:x:105:109::/var/run/dbus:/bin/false<br>sshd:x:104:65534::/var/run/sshd:/usr/sbin/nologin</p>
 </blockquote>
 </li>
@@ -456,8 +461,10 @@
 </li>
 <li><p>如果要对/etc/passwd,先以第六个域的第2个字符到第4个字符进行正向排序，再基于第一个域进行反向排序。</p>
 <ul>
-<li>语句：<code>cat /etc/passwd |  sort -t&#39;:&#39; -k 6.2,6.4 -k 1r</code></li>
-<li>结果：<blockquote>
+<li><p>语句：<code>cat /etc/passwd | sort -t&#39;:&#39; -k 6.2,6.4 -k 1r</code></p>
+</li>
+<li><p>结果：</p>
+<blockquote>
 <p>sync:x:4:65534:sync:/bin:/bin/sync<br>proxy:x:13:13:proxy:/bin:/bin/sh<br>bin:x:2:2:bin:/bin:/bin/sh<br>sys:x:3:3:sys:/dev:/bin/sh</p>
 </blockquote>
 </li>
@@ -465,30 +472,29 @@
 </li>
 <li><p>查看/etc/passwd有多少个shell:对/etc/passwd的第七个域进行排序，然后去重</p>
 <ul>
-<li>语句：<code>/etc/passwd |  sort -t&#39;:&#39; -k 7 -u</code></li>
-<li>结果：<blockquote>
+<li><p>语句：<code>/etc/passwd | sort -t&#39;:&#39; -k 7 -u</code></p>
+</li>
+<li><p>结果：</p>
+<blockquote>
 <p>root:x:0:0:root:/root:/bin/bash<br>syslog:x:101:102::/home/syslog:/bin/false<br>daemon:x:1:1:daemon:/usr/sbin:/bin/sh<br>sync:x:4:65534:sync:/bin:/bin/sync<br>sshd:x:104:65534::/var/run/sshd:/usr/sbin/nologin</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
-<p>##uniq命令</p>
-<ul>
+<h2 id="uniq命令"><a href="#uniq命令" class="headerlink" title="uniq命令"></a>uniq命令</h2><ul>
 <li>uniq命令可以去除排序过的文件中的重复行，因此uniq经常和sort合用。也就是说，为了使uniq起作用，所有的重复行必须是相邻的。</li>
 </ul>
-<p>###uniq语法</p>
-<ul>
+<h3 id="uniq语法"><a href="#uniq语法" class="headerlink" title="uniq语法"></a>uniq语法</h3><ul>
 <li>语法：<code>uniq [-icu]</code></li>
 <li>选项与参数：<ul>
-<li>-i   ：忽略大小写字符的不同；</li>
-<li>-c  ：进行计数;</li>
-<li>-u  ：只显示唯一的行;</li>
+<li>-i ：忽略大小写字符的不同；</li>
+<li>-c ：进行计数;</li>
+<li>-u ：只显示唯一的行;</li>
 </ul>
 </li>
 </ul>
-<p>##举个栗子</p>
-<ul>
+<h2 id="举个栗子-1"><a href="#举个栗子-1" class="headerlink" title="举个栗子"></a>举个栗子</h2><ul>
 <li><p>testfile文件内容</p>
 <blockquote>
 <p>hello<br>world<br>friend<br>hello<br>world<br>hello</p>
@@ -496,7 +502,7 @@
 </li>
 <li><p>语句：<code>uniq testfile</code></p>
 </li>
-<li><p>结果：直接删除未经排序的文件，将会发现没有任何行被删除        </p>
+<li><p>结果：直接删除未经排序的文件，将会发现没有任何行被删除</p>
 <blockquote>
 <p>hello<br>world<br>friend<br>hello<br>world<br>hello</p>
 </blockquote>
@@ -524,8 +530,9 @@
 </li>
 <li><p>语句：<code>sort testfile | uniq -u</code></p>
 </li>
-<li>结果：仅显示不重复的行<blockquote>
-<p>friend </p>
+<li><p>结果：仅显示不重复的行</p>
+<blockquote>
+<p>friend</p>
 </blockquote>
 </li>
 </ul>
@@ -606,8 +613,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/02/VMware虚拟机三种联网方法及原理/" rel="next" title="VMware虚拟机三种联网方法及原理">
-                <i class="fa fa-chevron-left"></i> VMware虚拟机三种联网方法及原理
+              <a href="/2016/04/02/Linux VIM文本编辑器/" rel="next" title="Linux VIM文本编辑器">
+                <i class="fa fa-chevron-left"></i> Linux VIM文本编辑器
               </a>
             
           </div>
@@ -616,8 +623,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/02/Linux 后台服务管理/" rel="prev" title="Linux 后台服务管理">
-                Linux 后台服务管理 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/02/Linxu备份压缩命令/" rel="prev" title="Linxu备份压缩命令">
+                Linxu备份压缩命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -683,8 +690,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -703,7 +719,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -714,7 +730,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -725,7 +741,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -755,6 +771,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sort命令"><span class="nav-number">1.</span> <span class="nav-text">sort命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sort语法"><span class="nav-number">1.1.</span> <span class="nav-text">sort语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举个栗子"><span class="nav-number">1.2.</span> <span class="nav-text">举个栗子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uniq命令"><span class="nav-number">2.</span> <span class="nav-text">uniq命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#uniq语法"><span class="nav-number">2.1.</span> <span class="nav-text">uniq语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举个栗子-1"><span class="nav-number">3.</span> <span class="nav-text">举个栗子</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

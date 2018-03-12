@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linux,Nginx,Keepalived," />
+  <meta name="keywords" content="Linux,Nginx,keepalived," />
 
 
 
@@ -81,22 +81,22 @@
 
 
 
-<meta name="description" content="##Nginx相关概念 ###反向代理  反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。   ###负载均衡  负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的">
-<meta name="keywords" content="Linux,Nginx,Keepalived">
+<meta name="description" content="Nginx相关概念反向代理 反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。   负载均衡 负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的方法扩展网络设备和服务">
+<meta name="keywords" content="Linux,Nginx,keepalived">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx + keepalived高可用">
+<meta property="og:title" content="Nginx + keepalived">
 <meta property="og:url" content="http://yoursite.com/2017/02/02/Nginx + keepalived/index.html">
 <meta property="og:site_name" content="Wei.Cao">
-<meta property="og:description" content="##Nginx相关概念 ###反向代理  反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。   ###负载均衡  负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的">
+<meta property="og:description" content="Nginx相关概念反向代理 反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。   负载均衡 负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的方法扩展网络设备和服务">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/Cd74aJ7fD3.png">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/6cLCbDB71i.png">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170907/0dgBdC4e4L.png">
 <meta property="og:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/4bIaIJ38m8.png">
-<meta property="og:updated_time" content="2018-03-08T11:48:55.451Z">
+<meta property="og:updated_time" content="2018-03-12T10:47:03.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx + keepalived高可用">
-<meta name="twitter:description" content="##Nginx相关概念 ###反向代理  反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。   ###负载均衡  负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的">
+<meta name="twitter:title" content="Nginx + keepalived">
+<meta name="twitter:description" content="Nginx相关概念反向代理 反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。   负载均衡 负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的方法扩展网络设备和服务">
 <meta name="twitter:image" content="http://ou9crezlk.bkt.clouddn.com/blog/170831/Cd74aJ7fD3.png">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>Nginx + keepalived高可用 | Wei.Cao</title>
+  <title>Nginx + keepalived | Wei.Cao</title>
   
 
 
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nginx + keepalived高可用</h1>
+          <h1 class="post-title" itemprop="name headline">Nginx + keepalived</h1>
         
 
         <div class="post-meta">
@@ -424,30 +424,24 @@
       
 
       
-        <p>##Nginx相关概念</p>
-<p>###反向代理</p>
-<ul>
+        <h2 id="Nginx相关概念"><a href="#Nginx相关概念" class="headerlink" title="Nginx相关概念"></a>Nginx相关概念</h2><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><ul>
 <li>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。</li>
-<li><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/Cd74aJ7fD3.png" alt="mark"></li>
+<li><a href="http://ou9crezlk.bkt.clouddn.com/blog/170831/Cd74aJ7fD3.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/Cd74aJ7fD3.png" alt="mark"></a></li>
 </ul>
-<p>###负载均衡</p>
-<ul>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><ul>
 <li>负载均衡，英文名称为Load Balance，是指建立在现有网络结构之上，并提供了一种廉价有效透明的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网络的灵活性和可用性。其原理就是<strong>数据流量分摊到多个服务器上执行，减轻每台服务器的压力</strong>，多台服务器共同完成工作任务，从而提高了数据的吞吐量。</li>
-<li><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/6cLCbDB71i.png" alt="mark"></li>
+<li><a href="http://ou9crezlk.bkt.clouddn.com/blog/170831/6cLCbDB71i.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/6cLCbDB71i.png" alt="mark"></a></li>
 </ul>
-<p>##Nginx的安装</p>
-<p>###下载nginx</p>
-<ul>
+<h2 id="Nginx的安装"><a href="#Nginx的安装" class="headerlink" title="Nginx的安装"></a>Nginx的安装</h2><h3 id="下载nginx"><a href="#下载nginx" class="headerlink" title="下载nginx"></a>下载nginx</h3><ul>
 <li>官网：<a href="http://nginx.org/" target="_blank" rel="noopener">http://nginx.org/</a></li>
 </ul>
-<p>###上传并解压nginx<br>命令：<code>tar -zxvf nginx-1.8.1.tar.gz -C /usr/local/src</code></p>
-<p>###编译nginx</p>
-<ul>
+<h3 id="上传并解压nginx"><a href="#上传并解压nginx" class="headerlink" title="上传并解压nginx"></a>上传并解压nginx</h3><p>命令：<code>tar -zxvf nginx-1.8.1.tar.gz -C /usr/local/src</code></p>
+<h3 id="编译nginx"><a href="#编译nginx" class="headerlink" title="编译nginx"></a>编译nginx</h3><ul>
 <li><p>进入到nginx源码目录<br><code>cd /usr/local/src/nginx-1.8.1</code></p>
 </li>
 <li><p>检查安装环境,并指定将来要安装的路径<br><code>./configure --prefix=/usr/local/nginx</code></p>
 </li>
-<li><p>缺包报错 </p>
+<li><p>缺包报错</p>
 <blockquote>
 <p>./configure: error: C compiler cc is not found</p>
 </blockquote>
@@ -461,29 +455,31 @@
 <li><p>查看端口是否有ngnix进程监听<br><code>netstat -ntlp | grep 80</code></p>
 </li>
 </ul>
-<p>##配置nginx</p>
-<p>###配置反向代理</p>
-<ul>
+<h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><h3 id="配置反向代理"><a href="#配置反向代理" class="headerlink" title="配置反向代理"></a>配置反向代理</h3><ul>
 <li><p>修改nginx配置文件</p>
 <ul>
-<li><code>vim /usr/local/nginx/conf/nginx.conf</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  demo.nginx.com;    #nginx所在服务器的主机名</span><br><span class="line">#反向代理的配置</span><br><span class="line">location / &#123;             #拦截所有请求</span><br><span class="line">    root html;</span><br><span class="line">        proxy_pass http://192.168.0.21:8080;   #这里是代理走向的目标服务器：tomcat</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  demo.nginx.com;    #nginx所在服务器的主机名</span><br><span class="line">#反向代理的配置</span><br><span class="line">location / &#123;             #拦截所有请求</span><br><span class="line">    root html;</span><br><span class="line">        proxy_pass http://192.168.0.21:8080;   #这里是代理走向的目标服务器：tomcat</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>启动配置的tomcat</p>
 </li>
-<li>启动nginx<ul>
+<li><p>启动nginx</p>
+<ul>
 <li><code>./nginx</code></li>
 </ul>
 </li>
-<li>重启nginx<ul>
+<li><p>重启nginx</p>
+<ul>
 <li><code>./nginx -s reload</code></li>
 </ul>
 </li>
-<li>关闭<ul>
+<li><p>关闭</p>
+<ul>
 <li>查询nginx主进程号<ul>
 <li><code>ps -ef | grep nginx</code></li>
-<li><img src="http://ou9crezlk.bkt.clouddn.com/blog/170907/0dgBdC4e4L.png" alt="mark"></li>
+<li><a href="http://ou9crezlk.bkt.clouddn.com/blog/170907/0dgBdC4e4L.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170907/0dgBdC4e4L.png" alt="mark"></a></li>
 </ul>
 </li>
 <li>从容停止<code>kill -QUIT 主进程号</code></li>
@@ -496,34 +492,31 @@
 </ul>
 </li>
 </ul>
-<p>###动静分离<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#动态资源 index.jsp</span><br><span class="line">location ~ .*\.(jsp|do|action)$ &#123;</span><br><span class="line">    proxy_pass http://tomcat-01.itcast.cn:8080;</span><br><span class="line">&#125;</span><br><span class="line">#静态资源</span><br><span class="line">location ~ .*\.(html|js|css|gif|jpg|jpeg|png)$ &#123;</span><br><span class="line">    expires 3d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>###负载均衡</p>
-<ul>
-<li>在http这个节下面配置一个叫upstream的，后面的名字可以随意取，但是要和location下的proxy_pass http://后的保持一致。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    是在http里面的, 已有http, 不是在server里,在server外面</span><br><span class="line">    upstream tomcats &#123; </span><br><span class="line">        server shizhan02:8080 weight=1;#weight表示权重 数字越大越高</span><br><span class="line">        server shizhan03:8080 weight=1;</span><br><span class="line">        server shizhan04:8080 weight=1;</span><br><span class="line">    &#125;</span><br><span class="line">#卸载server里</span><br><span class="line">location ~ .*\.(jsp|do|action) &#123;</span><br><span class="line">    proxy_pass http://tomcats;        #tomcats是后面的tomcat服务器组的逻辑组号</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#动态资源 index.jsp</span><br><span class="line">location ~ .*\.(jsp|do|action)$ &#123;</span><br><span class="line">    proxy_pass http://tomcat-01.itcast.cn:8080;</span><br><span class="line">&#125;</span><br><span class="line">#静态资源</span><br><span class="line">location ~ .*\.(html|js|css|gif|jpg|jpeg|png)$ &#123;</span><br><span class="line">    expires 3d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="负载均衡-1"><a href="#负载均衡-1" class="headerlink" title="负载均衡"></a>负载均衡</h3><ul>
+<li><p>在http这个节下面配置一个叫upstream的，后面的名字可以随意取，但是要和location下的proxy_pass http://后的保持一致。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    是在http里面的, 已有http, 不是在server里,在server外面</span><br><span class="line">    upstream tomcats &#123; </span><br><span class="line">        server shizhan02:8080 weight=1;#weight表示权重 数字越大越高</span><br><span class="line">        server shizhan03:8080 weight=1;</span><br><span class="line">        server shizhan04:8080 weight=1;</span><br><span class="line">    &#125;</span><br><span class="line">#卸载server里</span><br><span class="line">location ~ .*\.(jsp|do|action) &#123;</span><br><span class="line">    proxy_pass http://tomcats;        #tomcats是后面的tomcat服务器组的逻辑组号</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>##利用keepalived实现高可靠</p>
-<p>###高可靠概念</p>
-<ul>
-<li>HA(High Available), 高可用性集群，是保证业务连续性的有效解决方案，一般有两个或两个以上的节点，且分为活动节点及备用节点。<br><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/4bIaIJ38m8.png" alt="mark"></li>
+<h2 id="利用keepalived实现高可靠"><a href="#利用keepalived实现高可靠" class="headerlink" title="利用keepalived实现高可靠"></a>利用keepalived实现高可靠</h2><h3 id="高可靠概念"><a href="#高可靠概念" class="headerlink" title="高可靠概念"></a>高可靠概念</h3><ul>
+<li>HA(High Available), 高可用性集群，是保证业务连续性的有效解决方案，一般有两个或两个以上的节点，且分为活动节点及备用节点。<br><a href="http://ou9crezlk.bkt.clouddn.com/blog/170831/4bIaIJ38m8.png" target="_blank" rel="noopener"><img src="http://ou9crezlk.bkt.clouddn.com/blog/170831/4bIaIJ38m8.png" alt="mark"></a></li>
 </ul>
-<p>###高可靠软件keepalived</p>
-<ul>
+<h3 id="高可靠软件keepalived"><a href="#高可靠软件keepalived" class="headerlink" title="高可靠软件keepalived"></a>高可靠软件keepalived</h3><ul>
 <li>keepalive是一款可以实现高可靠的软件，通常部署在2台服务器上，分为一主一备。Keepalived可以对本机上的进程进行检测，一旦Master检测出某个进程出现问题，将自己切换成Backup状态，然后通知另外一个节点切换成Master状态。</li>
 </ul>
-<p>##keepalived安装</p>
+<h2 id="keepalived安装"><a href="#keepalived安装" class="headerlink" title="keepalived安装"></a>keepalived安装</h2><ul>
+<li><p>下载keepalived</p>
 <ul>
-<li>下载keepalived<ul>
-<li>官网:<a href="http://keepalived.org" target="_blank" rel="noopener">http://keepalived.org</a></li>
+<li>官网:<a href="http://keepalived.org/" target="_blank" rel="noopener">http://keepalived.org</a></li>
 </ul>
 </li>
-<li>安装<blockquote>
-<p>将keepalived解压到/usr/local/src目录下<br>ar -zxvf  keepalived-1.2.19.tar.gz -C /usr/local/src<br>进入到/usr/local/src/keepalived-1.2.19目录<br>d /usr/local/src/keepalived-1.2.19<br>开始configure<br>/configure –prefix=/usr/local/keepalived<br>#编译并安装<br>ake &amp;&amp; make install</p>
+<li><p>安装</p>
+<blockquote>
+<p>将keepalived解压到/usr/local/src目录下<br>ar -zxvf keepalived-1.2.19.tar.gz -C /usr/local/src<br>进入到/usr/local/src/keepalived-1.2.19目录<br>d /usr/local/src/keepalived-1.2.19<br>开始configure<br>/configure –prefix=/usr/local/keepalived<br>#编译并安装<br>ake &amp;&amp; make install</p>
 </blockquote>
 </li>
 </ul>
-<p>###将keepalived添加到系统服务中</p>
-<ul>
+<h3 id="将keepalived添加到系统服务中"><a href="#将keepalived添加到系统服务中" class="headerlink" title="将keepalived添加到系统服务中"></a>将keepalived添加到系统服务中</h3><ul>
 <li>拷贝执行文件<br><code>cp /usr/local/keepalived/sbin/keepalived /usr/sbin/</code></li>
 <li>将init.d文件拷贝到etc下,加入开机启动项<br><code>cp /usr/local/keepalived/etc/rc.d/init.d/keepalived</code><br><code>/etc/init.d/keepalived</code></li>
 <li>将keepalived文件拷贝到etc下<br><code>cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/</code></li>
@@ -531,40 +524,39 @@
 <li>将keepalived配置文件拷贝到etc下<br><code>cp /usr/local/keepalived/etc/keepalived/keepalived.conf</code> <code>/etc/keepalived/keepalived.conf</code></li>
 <li>添加可执行权限<br><code>chmod +x /etc/init.d/keepalived</code></li>
 </ul>
-<p>####以上所有命令一次性执行(绝对路径)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/keepalived/sbin/keepalived /usr/sbin/</span><br><span class="line">cp /usr/local/keepalived/etc/rc.d/init.d/keepalived /etc/init.d/keepalived</span><br><span class="line">cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/ </span><br><span class="line">mkdir -p /etc/keepalived</span><br><span class="line">cp /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf</span><br><span class="line">chmod +x /etc/init.d/keepalived</span><br><span class="line">chkconfig --add keepalived	</span><br><span class="line">chkconfig keepalived on</span><br></pre></td></tr></table></figure></p>
-<p>###添加keepalived到开机启动<br><code>chkconfig --add keepalived</code><br><code>chkconfig keepalived on</code></p>
-<p>##配置keepalived虚拟IP</p>
-<ul>
+<h4 id="以上所有命令一次性执行-绝对路径-："><a href="#以上所有命令一次性执行-绝对路径-：" class="headerlink" title="以上所有命令一次性执行(绝对路径)："></a>以上所有命令一次性执行(绝对路径)：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/keepalived/sbin/keepalived /usr/sbin/</span><br><span class="line">cp /usr/local/keepalived/etc/rc.d/init.d/keepalived /etc/init.d/keepalived</span><br><span class="line">cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/ </span><br><span class="line">mkdir -p /etc/keepalived</span><br><span class="line">cp /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf</span><br><span class="line">chmod +x /etc/init.d/keepalived</span><br><span class="line">chkconfig --add keepalived	</span><br><span class="line">chkconfig keepalived on</span><br></pre></td></tr></table></figure>
+<h3 id="添加keepalived到开机启动"><a href="#添加keepalived到开机启动" class="headerlink" title="添加keepalived到开机启动"></a>添加keepalived到开机启动</h3><p><code>chkconfig --add keepalived</code><br><code>chkconfig keepalived on</code></p>
+<h2 id="配置keepalived虚拟IP"><a href="#配置keepalived虚拟IP" class="headerlink" title="配置keepalived虚拟IP"></a>配置keepalived虚拟IP</h2><ul>
 <li><p>修改配置文件： /etc/keepalived/keepalived.conf</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#MASTER节点</span><br><span class="line">global_defs &#123;</span><br><span class="line">&#125;</span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state MASTER   #指定A节点为主节点 备用节点上设置为BACKUP即可</span><br><span class="line">    interface eth0    #绑定虚拟IP的网络接口</span><br><span class="line">    virtual_router_id 51   #VRRP组名，两个节点的设置必须一样，以指明各个节点属于同一VRRP组</span><br><span class="line">    priority 100   #主节点的优先级（1-254之间），备用节点必须比主节点优先级低</span><br><span class="line">    advert_int 1  #组播信息发送间隔，两个节点设置必须一样</span><br><span class="line">    authentication &#123;    #设置验证信息，两个节点必须一致</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass 1111</span><br><span class="line">    &#125;</span><br><span class="line">    virtual_ipaddress &#123;    #指定虚拟IP, 两个节点设置必须一样</span><br><span class="line">        192.168.33.60/24    #如果两个nginx的ip分别是192.168.33.61,,...62，则此处的虚拟ip跟它俩同一个网段即可</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#BACKUP节点</span><br><span class="line">global_defs &#123;</span><br><span class="line">&#125;</span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state BACKUP</span><br><span class="line">    interface eth0</span><br><span class="line">    virtual_router_id 51</span><br><span class="line">    priority 99</span><br><span class="line">    advert_int 1</span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass 1111</span><br><span class="line">    &#125;</span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        192.168.33.60/24</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>分别启动两台机器上的keepalived</p>
 </li>
-<li>启动命令：<code>service keepalived start</code></li>
-<li>测试：<ul>
+<li><p>启动命令：<code>service keepalived start</code></p>
+</li>
+<li><p>测试：</p>
+<ul>
 <li>杀掉master上的keepalived进程，你会发现，在slave机器上的eth0网卡多了一个ip地址</li>
 </ul>
 </li>
-<li>查看ip地址的命令： <code>ip addr</code></li>
+<li><p>查看ip地址的命令： <code>ip addr</code></p>
+</li>
 </ul>
-<p>##配置keepalived心跳检查</p>
-<ul>
+<h2 id="配置keepalived心跳检查"><a href="#配置keepalived心跳检查" class="headerlink" title="配置keepalived心跳检查"></a>配置keepalived心跳检查</h2><ul>
 <li>原理：</li>
 <li>Keepalived并不跟nginx耦合，它俩完全不是一家人<br>但是keepalived提供一个机制：让用户自定义一个shell脚本去检测用户自己的程序，返回状态给keepalived就可以了</li>
 </ul>
-<p>###MASTER节点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">global_defs &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_script chk_health &#123;</span><br><span class="line">    script &quot;[[ `ps -ef | grep nginx | grep -v grep | wc -l` -ge 2 ]] &amp;&amp; exit 0 || exit 1&quot;</span><br><span class="line">    interval 1    #每隔1秒执行上述的脚本，去检查用户的程序ngnix</span><br><span class="line">    weight -2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state MASTER</span><br><span class="line">    interface eth0</span><br><span class="line">    virtual_router_id 1</span><br><span class="line">    priority 100</span><br><span class="line">    advert_int 2</span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass 1111</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    track_script &#123;</span><br><span class="line">        chk_health</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        10.0.0.10/24</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    notify_master &quot;/usr/local/keepalived/sbin/notify.sh master&quot;</span><br><span class="line">    notify_backup &quot;/usr/local/keepalived/sbin/notify.sh backup&quot;</span><br><span class="line">    notify_fault &quot;/usr/local/keepalived/sbin/notify.sh fault&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>###添加切换通知脚本</p>
-<ul>
-<li><code>vi /usr/local/keepalived/sbin/notify.sh</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">    master)</span><br><span class="line">        /usr/local/nginx/sbin/nginx</span><br><span class="line">        exit 0</span><br><span class="line">    ;;</span><br><span class="line">backup)</span><br><span class="line">        /usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">        /usr/local/nginx/sbin/nginx</span><br><span class="line">        exit 0</span><br><span class="line">    ;;</span><br><span class="line">    fault)</span><br><span class="line">        /usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">        exit 0</span><br><span class="line">    ;;</span><br><span class="line">    *)</span><br><span class="line">        echo &apos;Usage: notify.sh &#123;master|backup|fault&#125;&apos;</span><br><span class="line">        exit 1</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<h3 id="MASTER节点"><a href="#MASTER节点" class="headerlink" title="MASTER节点"></a>MASTER节点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">global_defs &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_script chk_health &#123;</span><br><span class="line">    script &quot;[[ `ps -ef | grep nginx | grep -v grep | wc -l` -ge 2 ]] &amp;&amp; exit 0 || exit 1&quot;</span><br><span class="line">    interval 1    #每隔1秒执行上述的脚本，去检查用户的程序ngnix</span><br><span class="line">    weight -2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state MASTER</span><br><span class="line">    interface eth0</span><br><span class="line">    virtual_router_id 1</span><br><span class="line">    priority 100</span><br><span class="line">    advert_int 2</span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass 1111</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    track_script &#123;</span><br><span class="line">        chk_health</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        10.0.0.10/24</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    notify_master &quot;/usr/local/keepalived/sbin/notify.sh master&quot;</span><br><span class="line">    notify_backup &quot;/usr/local/keepalived/sbin/notify.sh backup&quot;</span><br><span class="line">    notify_fault &quot;/usr/local/keepalived/sbin/notify.sh fault&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="添加切换通知脚本"><a href="#添加切换通知脚本" class="headerlink" title="添加切换通知脚本"></a>添加切换通知脚本</h3><ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/keepalived/sbin/notify.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">    master)</span><br><span class="line">        /usr/local/nginx/sbin/nginx</span><br><span class="line">        exit 0</span><br><span class="line">    ;;</span><br><span class="line">backup)</span><br><span class="line">        /usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">        /usr/local/nginx/sbin/nginx</span><br><span class="line">        exit 0</span><br><span class="line">    ;;</span><br><span class="line">    fault)</span><br><span class="line">        /usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">        exit 0</span><br><span class="line">    ;;</span><br><span class="line">    *)</span><br><span class="line">        echo &apos;Usage: notify.sh &#123;master|backup|fault&#125;&apos;</span><br><span class="line">        exit 1</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>###添加执行权限</p>
-<ul>
+<h3 id="添加执行权限"><a href="#添加执行权限" class="headerlink" title="添加执行权限"></a>添加执行权限</h3><ul>
 <li><code>chmod +x /usr/local/keepalived/sbin/notify.sh</code></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">global_defs &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_script chk_health &#123;</span><br><span class="line">    script &quot;[[ `ps -ef | grep nginx | grep -v grep | wc -l` -ge 2 ]] &amp;&amp; exit 0 || exit 1&quot;</span><br><span class="line">    interval 1</span><br><span class="line">    weight -2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state BACKUP</span><br><span class="line">    interface eth0</span><br><span class="line">    virtual_router_id 1</span><br><span class="line">    priority 99</span><br><span class="line">    advert_int 1</span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass 1111</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    track_script &#123;</span><br><span class="line">        chk_health</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        10.0.0.10/24</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">    notify_master &quot;/usr/local/keepalived/sbin/notify.sh master&quot;</span><br><span class="line">    notify_backup &quot;/usr/local/keepalived/sbin/notify.sh backup&quot;</span><br><span class="line">    notify_fault &quot;/usr/local/keepalived/sbin/notify.sh fault&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###在第二台机器上添加notify.sh脚本</p>
-<p>###分别在两台机器上启动keepalived<br><code>service keepalived start</code><br><code>chkconfig keepalived on</code></p>
+<h3 id="在第二台机器上添加notify-sh脚本"><a href="#在第二台机器上添加notify-sh脚本" class="headerlink" title="在第二台机器上添加notify.sh脚本"></a>在第二台机器上添加notify.sh脚本</h3><h3 id="分别在两台机器上启动keepalived"><a href="#分别在两台机器上启动keepalived" class="headerlink" title="分别在两台机器上启动keepalived"></a>分别在两台机器上启动keepalived</h3><p><code>service keepalived start</code><br><code>chkconfig keepalived on</code></p>
 
       
     </div>
@@ -614,7 +606,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2017/02/02/Nginx + keepalived/" title="Nginx + keepalived高可用">http://yoursite.com/2017/02/02/Nginx + keepalived/</a>
+    <a href="http://yoursite.com/2017/02/02/Nginx + keepalived/" title="Nginx + keepalived">http://yoursite.com/2017/02/02/Nginx + keepalived/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -633,7 +625,7 @@
           
             <a href="/tags/Nginx/" rel="tag"># Nginx</a>
           
-            <a href="/tags/Keepalived/" rel="tag"># Keepalived</a>
+            <a href="/tags/keepalived/" rel="tag"># keepalived</a>
           
         </div>
       
@@ -646,8 +638,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/26/java的JMS技术/" rel="next" title="java并发编程学习的一些总结">
-                <i class="fa fa-chevron-left"></i> java并发编程学习的一些总结
+              <a href="/2016/08/26/java的JMS技术/" rel="next" title="Java的JMS技术">
+                <i class="fa fa-chevron-left"></i> Java的JMS技术
               </a>
             
           </div>
@@ -723,8 +715,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -743,7 +744,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">106</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -754,7 +755,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -765,7 +766,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -795,6 +796,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx相关概念"><span class="nav-number">1.</span> <span class="nav-text">Nginx相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#反向代理"><span class="nav-number">1.1.</span> <span class="nav-text">反向代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">1.2.</span> <span class="nav-text">负载均衡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx的安装"><span class="nav-number">2.</span> <span class="nav-text">Nginx的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载nginx"><span class="nav-number">2.1.</span> <span class="nav-text">下载nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传并解压nginx"><span class="nav-number">2.2.</span> <span class="nav-text">上传并解压nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译nginx"><span class="nav-number">2.3.</span> <span class="nav-text">编译nginx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置nginx"><span class="nav-number">3.</span> <span class="nav-text">配置nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置反向代理"><span class="nav-number">3.1.</span> <span class="nav-text">配置反向代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动静分离"><span class="nav-number">3.2.</span> <span class="nav-text">动静分离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡-1"><span class="nav-number">3.3.</span> <span class="nav-text">负载均衡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用keepalived实现高可靠"><span class="nav-number">4.</span> <span class="nav-text">利用keepalived实现高可靠</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#高可靠概念"><span class="nav-number">4.1.</span> <span class="nav-text">高可靠概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高可靠软件keepalived"><span class="nav-number">4.2.</span> <span class="nav-text">高可靠软件keepalived</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keepalived安装"><span class="nav-number">5.</span> <span class="nav-text">keepalived安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将keepalived添加到系统服务中"><span class="nav-number">5.1.</span> <span class="nav-text">将keepalived添加到系统服务中</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以上所有命令一次性执行-绝对路径-："><span class="nav-number">5.1.1.</span> <span class="nav-text">以上所有命令一次性执行(绝对路径)：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加keepalived到开机启动"><span class="nav-number">5.2.</span> <span class="nav-text">添加keepalived到开机启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置keepalived虚拟IP"><span class="nav-number">6.</span> <span class="nav-text">配置keepalived虚拟IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置keepalived心跳检查"><span class="nav-number">7.</span> <span class="nav-text">配置keepalived心跳检查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MASTER节点"><span class="nav-number">7.1.</span> <span class="nav-text">MASTER节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加切换通知脚本"><span class="nav-number">7.2.</span> <span class="nav-text">添加切换通知脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加执行权限"><span class="nav-number">7.3.</span> <span class="nav-text">添加执行权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在第二台机器上添加notify-sh脚本"><span class="nav-number">7.4.</span> <span class="nav-text">在第二台机器上添加notify.sh脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分别在两台机器上启动keepalived"><span class="nav-number">7.5.</span> <span class="nav-text">分别在两台机器上启动keepalived</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
